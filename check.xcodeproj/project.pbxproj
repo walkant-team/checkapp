@@ -18,6 +18,7 @@
 		AF8A6B421C30DE2F002347D2 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B411C30DE2F002347D2 /* EventDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AF8A6B441C31054A002347D2 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B431C31054A002347D2 /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
 		AF8A6B491C310AA2002347D2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B481C310AA2002347D2 /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		AF8A6B4D1C311710002347D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AFF434061C30B6460071B9F1 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434051C30B6460071B9F1 /* EventTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AFF434081C30C0CC0071B9F1 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434071C30C0CC0071B9F1 /* EventTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		AF8A6B461C310AA1002347D2 /* check-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "check-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF8A6B471C310AA2002347D2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
 		AF8A6B481C310AA2002347D2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AFF434051C30B6460071B9F1 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		AFF434071C30C0CC0071B9F1 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 				AF3861551C2904BB00F26332 /* AppDelegate.swift */,
 				AF3861571C2904BB00F26332 /* ViewController.swift */,
 				AF3861591C2904BB00F26332 /* Main.storyboard */,
+				AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */,
 				AF8A6B431C31054A002347D2 /* MenuController.swift */,
 				AF8A6B3D1C30D14F002347D2 /* Event.swift */,
 				AF8A6B411C30DE2F002347D2 /* EventDetailViewController.swift */,
@@ -295,6 +298,7 @@
 				AF8A6B491C310AA2002347D2 /* SWRevealViewController.m in Sources */,
 				AF3861581C2904BB00F26332 /* ViewController.swift in Sources */,
 				AFF434061C30B6460071B9F1 /* EventTableViewController.swift in Sources */,
+				AF8A6B4D1C311710002347D2 /* ProfileViewController.swift in Sources */,
 				AF3861561C2904BB00F26332 /* AppDelegate.swift in Sources */,
 				AF8A6B3E1C30D14F002347D2 /* Event.swift in Sources */,
 			);
