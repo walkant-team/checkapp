@@ -9,10 +9,13 @@
 import UIKit
 
 class EventTableViewController: UITableViewController {
+    @IBOutlet var menuButton:UIBarButtonItem!
+    
     var events:[Event] = [
         Event(title: "Conferencia de prensa Backus", schedule: "Hoy, Lunes 23 de Nov 10:00 am", address: "Av. Larco 245 - Miraflores", description: "Description 1"),
         Event(title: "Degustacion Wong", schedule: "Jueves 26 de Nov, 9:30 am", address: "Av Saint Saenz 549", description: "Description 2"),
         Event(title: "Desfile de Modas saga Falabella", schedule: "Viernes 27 de Nov, 9:30 am", address: "Av. Larco 245", description: "Description 3")]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,13 @@ class EventTableViewController: UITableViewController {
         
         // Change the color of the separator
         tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
+        
+        // Menu toggle
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
     }
 
