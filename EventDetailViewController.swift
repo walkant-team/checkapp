@@ -25,6 +25,9 @@ class EventDetailViewController: UIViewController {
         scheduleLabel.text = event.schedule
         titleLabel.text = event.title
         addressLabel.text = event.address
+        
+        // Set the title of the navigation bar
+        title = event.title
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,6 +35,13 @@ class EventDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     /*
     // MARK: - Navigation

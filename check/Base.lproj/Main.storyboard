@@ -80,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="1069" y="187"/>
         </scene>
-        <!--Events-->
+        <!--Checkin-->
         <scene sceneID="nOA-5E-EeN">
             <objects>
                 <tableViewController id="Q0e-In-86x" customClass="EventTableViewController" customModule="check" customModuleProvider="target" sceneMemberID="viewController">
@@ -188,7 +188,7 @@
                             <outlet property="delegate" destination="Q0e-In-86x" id="p1Q-y6-UVI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Events" id="4gA-2Y-TNf"/>
+                    <navigationItem key="navigationItem" title="Checkin" id="4gA-2Y-TNf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RP-WF-7he" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

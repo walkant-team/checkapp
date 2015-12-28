@@ -22,6 +22,19 @@ class EventTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Remove the title of the back button
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
+        // Change the color of the table view
+        tableView.backgroundColor = UIColor.whiteColor()
+        
+        // Remove the separators of the empty rows
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        // Change the color of the separator
+        tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
+        
     }
 
     override func didReceiveMemoryWarning() {
