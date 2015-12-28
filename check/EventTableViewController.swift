@@ -10,9 +10,9 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
     var events:[Event] = [
-        Event(title: "Conferencia de prensa Backus", schedule: "Hoy, Lunes 23 de Nov 10:00 am", address: "Av. Larco 245 - Miraflores"),
-        Event(title: "Degustacion Wong", schedule: "Jueves 26 de Nov, 9:30 am", address: "Av Saint Saenz 549"),
-        Event(title: "Desfile de Modas saga Falabella", schedule: "Viernes 27 de Nov, 9:30 am", address: "Av. Larco 245")]
+        Event(title: "Conferencia de prensa Backus", schedule: "Hoy, Lunes 23 de Nov 10:00 am", address: "Av. Larco 245 - Miraflores", description: "Description 1"),
+        Event(title: "Degustacion Wong", schedule: "Jueves 26 de Nov, 9:30 am", address: "Av Saint Saenz 549", description: "Description 2"),
+        Event(title: "Desfile de Modas saga Falabella", schedule: "Viernes 27 de Nov, 9:30 am", address: "Av. Larco 245", description: "Description 3")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,14 +87,18 @@ class EventTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showEventDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destinationViewController as! EventDetailViewController
+                destinationController.event = events[indexPath.row]
+            }
+        }
     }
-    */
 
 }

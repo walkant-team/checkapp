@@ -94,7 +94,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rGr-lc-bRU" id="ORJ-76-ODe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="139.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJa-Nm-OmH">
@@ -116,7 +116,7 @@
                                                     <rect key="frame" x="8" y="44" width="382" height="75"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KTr-Ka-BeC">
-                                                            <rect key="frame" x="0.0" y="0.0" width="318" height="74.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="318" height="75"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3b2-hK-Ca4">
                                                                     <rect key="frame" x="0.0" y="0.0" width="36" height="20"/>
@@ -179,6 +179,7 @@
                                     <outlet property="containerView" destination="mJa-Nm-OmH" id="E8E-m5-E1k"/>
                                     <outlet property="scheduleLabel" destination="Mcl-GR-yhl" id="bEV-cq-Jpu"/>
                                     <outlet property="titleLabel" destination="Cvo-JZ-nje" id="Zw5-JJ-fsi"/>
+                                    <segue destination="faN-6i-J55" kind="show" identifier="showEventDetail" id="8Ad-s3-FLl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -192,6 +193,149 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RP-WF-7he" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2316" y="152"/>
+        </scene>
+        <!--Event Detail View Controller-->
+        <scene sceneID="IM4-08-I9H">
+            <objects>
+                <viewController id="faN-6i-J55" customClass="EventDetailViewController" customModule="check" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wrr-Mg-XHd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xta-ZB-9ew"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j0a-bv-xKz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aP-JP-tAj">
+                                <rect key="frame" x="8" y="72" width="398" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCT-GI-fnn">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="36"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.14625942707061768" green="0.59312176704406738" blue="0.83490675687789917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="rXF-TS-OEN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988085031509399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mxm-pB-lQ9">
+                                        <rect key="frame" x="8" y="44" width="382" height="75"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgB-xg-znN">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="20"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.41508406400680542" green="0.62875372171401978" blue="0.76596802473068237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conferencia de prensa Backus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41t-ui-F6D">
+                                                <rect key="frame" x="0.0" y="28" width="235" height="20"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="0.27722468972206116" green="0.57547825574874878" blue="0.73850530385971069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Av. saint saenz 549 - san borja" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOg-Qb-kfV">
+                                                <rect key="frame" x="0.0" y="56" width="203" height="20"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
+                                                <color key="textColor" red="0.44366717338562012" green="0.67277669906616211" blue="0.8042638897895813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.90908324718475342" green="0.96136003732681274" blue="0.99724477529525757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Mxm-pB-lQ9" secondAttribute="bottom" constant="9" id="DRn-DS-ZbB"/>
+                                    <constraint firstAttribute="trailing" secondItem="cCT-GI-fnn" secondAttribute="trailing" id="DS6-8v-3Jc"/>
+                                    <constraint firstAttribute="height" constant="128" id="GJT-P6-TE9"/>
+                                    <constraint firstItem="Mxm-pB-lQ9" firstAttribute="top" secondItem="cCT-GI-fnn" secondAttribute="bottom" constant="8" id="JD4-TJ-eAv"/>
+                                    <constraint firstItem="cCT-GI-fnn" firstAttribute="top" secondItem="2aP-JP-tAj" secondAttribute="top" id="ROl-sb-2d7"/>
+                                    <constraint firstItem="cCT-GI-fnn" firstAttribute="leading" secondItem="2aP-JP-tAj" secondAttribute="leading" id="i9U-dY-3CK"/>
+                                    <constraint firstItem="Mxm-pB-lQ9" firstAttribute="leading" secondItem="2aP-JP-tAj" secondAttribute="leading" constant="8" id="maV-Ce-hbL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mxm-pB-lQ9" secondAttribute="trailing" constant="8" id="tFv-fo-JCY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHl-qT-5no">
+                                <rect key="frame" x="8" y="339" width="398" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.18821030855178833" green="0.18824970722198486" blue="0.18820786476135254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Descargar Información">
+                                    <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988085031509399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whu-nJ-g52">
+                                <rect key="frame" x="8" y="410" width="398" height="212"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripción del Evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2j8-ui-nX2">
+                                        <rect key="frame" x="8" y="16" width="248" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" red="0.46667718887329102" green="0.46278840303421021" blue="0.46269792318344116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHc-AY-m5V">
+                                        <rect key="frame" x="8" y="38" width="382" height="166"/>
+                                        <animations/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.68581515550613403" green="0.71390652656555176" blue="0.72580641508102417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.90908324718475342" green="0.96136003732681274" blue="0.99724477529525757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iV4-lF-706">
+                                <rect key="frame" x="0.0" y="640" width="414" height="52"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.16322487592697144" green="0.44976025819778442" blue="0.72586387395858765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="gtw-57-wDg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Check In">
+                                    <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988085031509399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iV4-lF-706" secondAttribute="trailing" id="LHu-Qv-YwW"/>
+                            <constraint firstItem="iV4-lF-706" firstAttribute="leading" secondItem="j0a-bv-xKz" secondAttribute="leading" id="TFA-4l-VRh"/>
+                            <constraint firstAttribute="trailing" secondItem="2aP-JP-tAj" secondAttribute="trailing" constant="8" id="YAo-cF-wKx"/>
+                            <constraint firstItem="Xta-ZB-9ew" firstAttribute="top" secondItem="iV4-lF-706" secondAttribute="bottom" id="ZXw-IM-vMg"/>
+                            <constraint firstItem="2aP-JP-tAj" firstAttribute="top" secondItem="Wrr-Mg-XHd" secondAttribute="bottom" constant="8" id="cdh-Kj-rAE"/>
+                            <constraint firstItem="2aP-JP-tAj" firstAttribute="leading" secondItem="j0a-bv-xKz" secondAttribute="leading" constant="8" id="j8v-V8-Ocg"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="lOg-Qb-kfV" id="qGU-d4-PMG"/>
+                        <outlet property="descriptionText" destination="xHc-AY-m5V" id="Wpy-GQ-kKC"/>
+                        <outlet property="scheduleLabel" destination="cCT-GI-fnn" id="eTx-KE-vVi"/>
+                        <outlet property="titleLabel" destination="41t-ui-F6D" id="1vK-Vb-AoQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hH-zM-ra0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2995" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hgM-kW-Wwq">

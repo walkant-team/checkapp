@@ -12,9 +12,11 @@ class Event {
     var title = ""
     var schedule = ""
     var address = ""
-    init(title:String, schedule:String, address:String){
+    var description = ""
+    init(title:String, schedule:String, address:String, description:String){
         self.title = title
         self.schedule = schedule
         self.address = address
+        self.description = description
     }
 }
