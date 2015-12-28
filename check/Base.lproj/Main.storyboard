@@ -473,6 +473,9 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" red="0.14625942707061768" green="0.59312176704406738" blue="0.83490675687789917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="fUs-kP-oiL" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="2Yz-Cz-Cln"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="YSg-Mu-XWI">
                                         <rect key="frame" x="0.0" y="140" width="375" height="44"/>

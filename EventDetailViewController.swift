@@ -41,6 +41,12 @@ class EventDetailViewController: UIViewController {
         
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        let carBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        carBtn.setImage(UIImage(named: "car"), forState: UIControlState.Normal)
+//        carBtn.addTarget(self.navigationController, action: "", forControlEvents:  UIControlEvents.TouchUpInside)
+        let item = UIBarButtonItem(customView: carBtn)
+        self.navigationItem.rightBarButtonItem = item
     }
 
     /*
