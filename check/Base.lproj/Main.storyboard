@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-Fh-sz5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-Fh-sz5">
                                 <rect key="frame" x="69" y="429" width="237" height="45"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.18447691202163696" green="0.74610871076583862" blue="0.95056051015853882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,10 +40,11 @@
                                     <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="signinBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwc-tm-Z7w"/>
                                     <segue destination="voD-s0-cDt" kind="show" id="nES-x6-iaI"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Usuario" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qip-8X-rkB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Usuario" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qip-8X-rkB">
                                 <rect key="frame" x="69" y="355" width="237" height="45"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.18447691202163696" green="0.74610871076583862" blue="0.95056051015853882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -81,6 +82,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="553-GX-OKQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="qip-8X-rkB" id="hNn-9R-1S2"/>
+                        <outlet property="passwordLabel" destination="u8T-Fh-sz5" id="Tnp-7H-dDI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,10 +9,13 @@
 import Foundation
 
 class Event {
-    var title = ""
-    var schedule = ""
-    var address = ""
-    var description = ""
+    
+    var id : Int!
+    var title : String!
+    var schedule : String!
+    var address : String!
+    var description : String!
+    
     init(title:String, schedule:String, address:String, description:String){
         self.title = title
         self.schedule = schedule
