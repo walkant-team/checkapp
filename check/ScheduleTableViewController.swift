@@ -17,60 +17,35 @@ class ScheduleTableViewController: UITableViewController {
   var didReturnFromBackground = false
   
   override func viewDidLoad() {
-      super.viewDidLoad()
-
-      // Uncomment the following line to preserve selection between presentations
-//         self.clearsSelectionOnViewWillAppear = false
-
-      // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//         self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    
-      // Remove the title of the back button
-      navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-    
-      
-      // Change the color of the table view
-      tableView.backgroundColor = UIColor.whiteColor()
-      
-      // Remove the separators of the empty rows
-      tableView.tableFooterView = UIView(frame: CGRectZero)
-      
-      // Change the color of the separator
-      tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
-      
-      // Menu toggle
-      if self.revealViewController() != nil {
-          menuButton.target = self.revealViewController()
-          menuButton.action = "revealToggle:"
-          self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-      }
-    
-      schedules = [Schedule]()
-      let api = CheckAPI()
-      api.loadSchedules(didLoadSchedules)    
-  }
+    super.viewDidLoad()
   
-  func appWillResignActive(notification : NSNotification) {
-    
-    view.alpha = 0
-    isAuthenticated = false
-    didReturnFromBackground = true
-  }
+    // Remove the title of the back button
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
   
-  func appDidBecomeActive(notification : NSNotification) {
+    // Change the color of the table view
+    tableView.backgroundColor = UIColor.whiteColor()
+    // Remove the separators of the empty rows
+    tableView.tableFooterView = UIView(frame: CGRectZero)
+    // Change the color of the separator
+    tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
     
-    if didReturnFromBackground {
-      self.showLoginView()
+    // Menu toggle
+    if self.revealViewController() != nil {
+      menuButton.target = self.revealViewController()
+      menuButton.action = "revealToggle:"
+      self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
+  
+    schedules = [Schedule]()
+    let api = CheckAPI()
+    api.loadSchedules(didLoadSchedules)    
   }
   
   
   override func viewDidAppear(animated: Bool) {
-    
     super.viewDidAppear(false)
     self.showLoginView()
   }
-
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -87,9 +62,22 @@ class ScheduleTableViewController: UITableViewController {
       self.performSegueWithIdentifier("loginView", sender: self)
     }
   }
+  
+  func appWillResignActive(notification : NSNotification) {
+    print("appWillResignActive")
+    view.alpha = 0
+    isAuthenticated = false
+    didReturnFromBackground = true
+  }
+  
+  func appDidBecomeActive(notification : NSNotification) {
+    print("appDidBecomeActive")
+    if didReturnFromBackground {
+      self.showLoginView()
+    }
+  }
 
   @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-    
     isAuthenticated = true
     view.alpha = 1.0
   }
@@ -113,6 +101,7 @@ class ScheduleTableViewController: UITableViewController {
 
       // Configure the cell...
       let schedule = schedules[indexPath.row]
+      cell.selectionStyle = UITableViewCellSelectionStyle.None
       cell.scheduleLabel?.text = schedule.date_time
       cell.addressLabel?.text = schedule.event.address
       cell.titleLabel?.text = schedule.event.name

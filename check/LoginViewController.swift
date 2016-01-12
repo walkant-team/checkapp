@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+      
   
     @IBAction func signinBtnTapped(sender: AnyObject) {
       
@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
         
         let alertView = UIAlertController(title: "Login Problem",
           message: "Wrong username or password." as String, preferredStyle:.Alert)
-        let okAction = UIAlertAction(title: "Foiled Again!", style: .Default, handler: nil)
+        let okAction = UIAlertAction(title: "Failed Again!", style: .Default, handler: nil)
         alertView.addAction(okAction)
         self.presentViewController(alertView, animated: true, completion: nil)
         return;
@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
         } else {
           let alertView = UIAlertController(title: "Login Problem",
             message: "Wrong username or password." as String, preferredStyle:.Alert)
-          let okAction = UIAlertAction(title: "Foiled Again!", style: .Default, handler: nil)
+          let okAction = UIAlertAction(title: "Failed Again!", style: .Default, handler: nil)
           alertView.addAction(okAction)
           self.presentViewController(alertView, animated: true, completion: nil)
         }
