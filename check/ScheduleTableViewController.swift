@@ -15,6 +15,7 @@ class ScheduleTableViewController: UITableViewController {
   var schedules : [Schedule]!
   var isAuthenticated = false
   var didReturnFromBackground = false
+  let api = CheckAPI()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,7 +38,6 @@ class ScheduleTableViewController: UITableViewController {
     }
   
     schedules = [Schedule]()
-    let api = CheckAPI()
     api.loadSchedules(didLoadSchedules)    
   }
   
@@ -58,7 +58,7 @@ class ScheduleTableViewController: UITableViewController {
   }
 
   func showLoginView() {
-    if !isAuthenticated {
+    if !api.hasOAuthToken() {
       self.performSegueWithIdentifier("loginView", sender: self)
     }
   }

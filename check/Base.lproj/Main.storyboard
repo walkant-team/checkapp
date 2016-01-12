@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-Fh-sz5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-Fh-sz5">
                                 <rect key="frame" x="69" y="429" width="237" height="45"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.18447691202163696" green="0.74610871076583862" blue="0.95056051015853882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -26,12 +26,12 @@
                                 </constraints>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="YXp-Fe-1nb"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Usuario" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qip-8X-rkB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qip-8X-rkB">
                                 <rect key="frame" x="69" y="355" width="237" height="45"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.18447691202163696" green="0.74610871076583862" blue="0.95056051015853882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -570,14 +570,19 @@
                                                     <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988085031509399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhP-6P-w67">
+                                                    <rect key="frame" x="0.0" y="-5" width="359" height="54"/>
+                                                    <animations/>
+                                                    <connections>
+                                                        <action selector="logout:" destination="eqo-Pp-djq" eventType="touchUpInside" id="OOL-oN-hrg"/>
+                                                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutView" id="tBF-cE-sF5"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" red="0.14625942707061768" green="0.59312176704406738" blue="0.83490675687789917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="1It-rB-xqD"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -620,7 +625,7 @@
         <image name="unckeck" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zHr-Ax-6CH"/>
+        <segue reference="0k3-5e-Lf7"/>
         <segue reference="hGD-jJ-GnT"/>
     </inferredMetricsTieBreakers>
 </document>

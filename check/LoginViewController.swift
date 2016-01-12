@@ -7,22 +7,21 @@
 //
 
 import UIKit
+import Locksmith
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailLabel: UITextField!
     @IBOutlet weak var passwordLabel: UITextField!
-    let MyKeychainWrapper = KeychainWrapper()
-    
     let api = CheckAPI()
   
     override func viewDidLoad() {
         
       super.viewDidLoad()
-      // Do any additional setup after loading the view, typically from a nib.
-      if let storedUsername = NSUserDefaults.standardUserDefaults().valueForKey("username") as? String {
-        emailLabel.text = storedUsername as String
-      }
+      emailLabel.attributedPlaceholder = NSAttributedString(string:"Usuario",
+      attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+      passwordLabel.attributedPlaceholder = NSAttributedString(string:"Password",
+        attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,8 +48,7 @@ class LoginViewController: UIViewController {
       
       api.loginWithEmail(emailLabel.text!, password: passwordLabel.text!) { (token) -> Void in
         if let token = token {
-          self.MyKeychainWrapper.mySetObject(token, forKey:kSecValueData)
-          self.MyKeychainWrapper.writeToKeychain()
+          self.api.OAuthToken = token
           self.performSegueWithIdentifier("dismissLogin", sender: self)
         } else {
           let alertView = UIAlertController(title: "Login Problem",
@@ -58,7 +56,7 @@ class LoginViewController: UIViewController {
           let okAction = UIAlertAction(title: "Failed Again!", style: .Default, handler: nil)
           alertView.addAction(okAction)
           self.presentViewController(alertView, animated: true, completion: nil)
-        }
+        }        
       }
     }
 }
