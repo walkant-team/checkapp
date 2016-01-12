@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventTableViewCell: UITableViewCell {
+class ScheduleTableViewCell: UITableViewCell {
     
     @IBOutlet var scheduleLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!

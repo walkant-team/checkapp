@@ -8,26 +8,25 @@
 
 import UIKit
 
-class EventDetailViewController: UIViewController {
-    
+class ScheduleDetailViewController: UIViewController {    
 
     @IBOutlet var titleLabel:UILabel!
     @IBOutlet var scheduleLabel:UILabel!
     @IBOutlet var addressLabel:UILabel!
     @IBOutlet var descriptionText:UITextView!
     
-    var event:Event!
+    var schedule:Schedule!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        descriptionText.text = event.description
-        scheduleLabel.text = event.schedule
-        titleLabel.text = event.title
-        addressLabel.text = event.address
-        
+        descriptionText.text = schedule.event.description
+        scheduleLabel.text = schedule.date_time
+        titleLabel.text = schedule.event.name
+        addressLabel.text = schedule.event.address
+      
         // Set the title of the navigation bar
-        title = event.title
+        title = schedule.event.name
     }
     
     override func didReceiveMemoryWarning() {

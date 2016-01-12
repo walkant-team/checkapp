@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="voD-s0-cDt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,23 +27,10 @@
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoK-29-wKI">
-                                <rect key="frame" x="0.0" y="608" width="375" height="59"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.14471322298049927" green="0.43661788105964661" blue="0.72724610567092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="VnH-TE-JJp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Ingresar">
-                                    <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
                                 <connections>
-                                    <action selector="signinBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwc-tm-Z7w"/>
-                                    <segue destination="voD-s0-cDt" kind="show" id="nES-x6-iaI"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YXp-Fe-1nb"/>
                                 </connections>
-                            </button>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Usuario" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qip-8X-rkB">
                                 <rect key="frame" x="69" y="355" width="237" height="45"/>
                                 <animations/>
@@ -54,6 +41,9 @@
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="EKH-hF-Z94"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mus-6o-NyZ">
                                 <rect key="frame" x="128" y="100" width="118" height="63"/>
@@ -63,9 +53,24 @@
                                     <constraint firstAttribute="height" constant="63" id="EbP-EI-wdx"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoK-29-wKI">
+                                <rect key="frame" x="0.0" y="608" width="375" height="59"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.14374446868896484" green="0.45028001070022583" blue="0.74194043874740601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="VnH-TE-JJp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Ingresar">
+                                    <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signinBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwc-tm-Z7w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.11543852835893631" green="0.58359283208847046" blue="0.83721369504928589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.080468244850635529" green="0.59354567527770996" blue="0.85102230310440063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="u8T-Fh-sz5" secondAttribute="bottom" constant="193" id="50L-CR-mBf"/>
                             <constraint firstItem="mus-6o-NyZ" firstAttribute="centerX" secondItem="u8T-Fh-sz5" secondAttribute="centerX" id="8q0-C8-S4n"/>
@@ -85,23 +90,25 @@
                     <connections>
                         <outlet property="emailLabel" destination="qip-8X-rkB" id="hNn-9R-1S2"/>
                         <outlet property="passwordLabel" destination="u8T-Fh-sz5" id="Tnp-7H-dDI"/>
+                        <segue destination="SBQ-x1-QOf" kind="unwind" identifier="dismissLogin" unwindAction="unwindSegue:" id="1BP-31-b9L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="SBQ-x1-QOf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="163.5" y="-547.5"/>
+            <point key="canvasLocation" x="378.5" y="1249.5"/>
         </scene>
         <!--Checkin-->
         <scene sceneID="nOA-5E-EeN">
             <objects>
-                <tableViewController id="Q0e-In-86x" customClass="EventTableViewController" customModule="check" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Q0e-In-86x" customClass="ScheduleTableViewController" customModule="check" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" id="2BG-nf-yCk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="rGr-lc-bRU" customClass="EventTableViewCell" customModule="check" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleCell" id="rGr-lc-bRU" customClass="ScheduleTableViewCell" customModule="check" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rGr-lc-bRU" id="ORJ-76-ODe">
@@ -204,16 +211,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="fwU-9k-Zkf" id="uwh-ty-dZY"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginView" animates="NO" id="hGD-jJ-GnT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RP-WF-7he" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="-352"/>
+            <point key="canvasLocation" x="785" y="331"/>
         </scene>
-        <!--Event Detail View Controller-->
+        <!--Schedule Detail View Controller-->
         <scene sceneID="IM4-08-I9H">
             <objects>
-                <viewController id="faN-6i-J55" customClass="EventDetailViewController" customModule="check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="faN-6i-J55" customClass="ScheduleDetailViewController" customModule="check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wrr-Mg-XHd"/>
                         <viewControllerLayoutGuide type="bottom" id="Xta-ZB-9ew"/>
@@ -351,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hH-zM-ra0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2459" y="-352"/>
+            <point key="canvasLocation" x="1183" y="1296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hgM-kW-Wwq">
@@ -371,7 +379,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J09-nU-0Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1295" y="-352"/>
+            <point key="canvasLocation" x="1347" y="-563"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="s25-HI-Bc8">
@@ -420,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lt8-M1-4RO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="529"/>
+            <point key="canvasLocation" x="-236" y="1165"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="Jgc-Vj-1gv">
@@ -444,7 +452,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBi-7G-r0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646.5" y="-1130.5"/>
+            <point key="canvasLocation" x="886.5" y="-1402.5"/>
         </scene>
         <!--Menu Controller-->
         <scene sceneID="Hsy-pB-TYf">
@@ -583,7 +591,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0J-cB-eao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646.5" y="-297.5"/>
+            <point key="canvasLocation" x="378.5" y="-583.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sa6-GX-cbp">
@@ -603,7 +611,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXN-bE-XQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1295" y="513"/>
+            <point key="canvasLocation" x="-235.5" y="236.5"/>
         </scene>
     </scenes>
     <resources>
@@ -612,6 +620,7 @@
         <image name="unckeck" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0k3-5e-Lf7"/>
+        <segue reference="zHr-Ax-6CH"/>
+        <segue reference="hGD-jJ-GnT"/>
     </inferredMetricsTieBreakers>
 </document>

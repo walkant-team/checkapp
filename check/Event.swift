@@ -10,16 +10,21 @@ import Foundation
 
 class Event {
     
-    var id : Int!
-    var title : String!
-    var schedule : String!
-    var address : String!
-    var description : String!
-    
-    init(title:String, schedule:String, address:String, description:String){
-        self.title = title
-        self.schedule = schedule
-        self.address = address
-        self.description = description
-    }
+  var eventId : Int!
+  var name : String!
+  var address : String!
+  var longitude : String
+  var latitude : String
+  var description : String!
+  var is_enabled : Bool!
+  
+  init(data : NSDictionary){
+    self.eventId = data["id"] as! Int
+    self.name = data["name"] as! String
+    self.address = data["address"] as! String
+    self.longitude = data["longitude"] as! String
+    self.latitude = data["latitude"] as! String
+    self.description = data["description"] as! String
+    self.is_enabled = data["is_enabled"] as! Bool
+  }
 }

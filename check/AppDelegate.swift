@@ -15,19 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        UINavigationBar.appearance().barTintColor = UIColor(red:0.16, green:0.59, blue:0.83, alpha:1.0)
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        
-        if let barFont = UIFont(name: "Avenir-Light", size: 18.0) {
-            UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:barFont]
-        }
-        
-        // Change the status bar's appearance
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
-        
-        return true
+      self.prepareNavigationBarAppearance()
+      
+      return true
+      
     }
+  
+  func prepareNavigationBarAppearance() {
+    
+    UINavigationBar.appearance().barTintColor = UIColor(red:0.16, green:0.59, blue:0.83, alpha:1.0)
+    UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+    
+    if let barFont = UIFont(name: "Avenir-Light", size: 18.0) {
+      UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:barFont]
+    }
+    
+    // Change the status bar's appearance
+    UIApplication.sharedApplication().statusBarStyle = .LightContent
+  }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

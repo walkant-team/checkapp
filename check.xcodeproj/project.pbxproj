@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1632BF1C3ED6BC00A3C60B /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1632BE1C3ED6BC00A3C60B /* Checkin.swift */; settings = {ASSET_TAGS = (); }; };
 		AF3861561C2904BB00F26332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861551C2904BB00F26332 /* AppDelegate.swift */; };
-		AF3861581C2904BB00F26332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861571C2904BB00F26332 /* ViewController.swift */; };
+		AF3861581C2904BB00F26332 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861571C2904BB00F26332 /* LoginViewController.swift */; };
 		AF38615B1C2904BB00F26332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3861591C2904BB00F26332 /* Main.storyboard */; };
 		AF38615D1C2904BB00F26332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF38615C1C2904BB00F26332 /* Assets.xcassets */; };
 		AF3861601C2904BB00F26332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF38615E1C2904BB00F26332 /* LaunchScreen.storyboard */; };
 		AF38616B1C2904BB00F26332 /* checkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38616A1C2904BB00F26332 /* checkTests.swift */; };
 		AF3861761C2904BB00F26332 /* checkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861751C2904BB00F26332 /* checkUITests.swift */; };
+		AF5CF6191C39FE9600FF190A /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CF6181C39FE9600FF190A /* Schedule.swift */; settings = {ASSET_TAGS = (); }; };
+		AF5CF6221C39FF7400FF190A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CF6211C39FF7400FF190A /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		AF8A6B3E1C30D14F002347D2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B3D1C30D14F002347D2 /* Event.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8A6B421C30DE2F002347D2 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B411C30DE2F002347D2 /* EventDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8A6B421C30DE2F002347D2 /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B411C30DE2F002347D2 /* ScheduleDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AF8A6B441C31054A002347D2 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B431C31054A002347D2 /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
 		AF8A6B491C310AA2002347D2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B481C310AA2002347D2 /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
 		AF8A6B4D1C311710002347D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AF9B04C51C35F69F008D50DC /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B04C41C35F69F008D50DC /* KeychainWrapper.m */; settings = {ASSET_TAGS = (); }; };
-		AFF434061C30B6460071B9F1 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434051C30B6460071B9F1 /* EventTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		AFF434081C30C0CC0071B9F1 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434071C30C0CC0071B9F1 /* EventTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		AFF434061C30B6460071B9F1 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434051C30B6460071B9F1 /* ScheduleTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AFF434081C30C0CC0071B9F1 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434071C30C0CC0071B9F1 /* ScheduleTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		AFFAD7831C34F31C00D1483B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFAD7821C34F31C00D1483B /* SwiftyJSON.swift */; settings = {ASSET_TAGS = (); }; };
 		AFFAD79C1C34F37D00D1483B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFAD78F1C34F32500D1483B /* Alamofire.framework */; };
 		AFFF39DA1C349A6600218D7B /* CheckAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF39D91C349A6600218D7B /* CheckAPI.swift */; settings = {ASSET_TAGS = (); }; };
@@ -94,9 +97,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1632BE1C3ED6BC00A3C60B /* Checkin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkin.swift; sourceTree = "<group>"; };
 		AF3861521C2904BB00F26332 /* check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = check.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3861551C2904BB00F26332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF3861571C2904BB00F26332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF3861571C2904BB00F26332 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AF38615A1C2904BB00F26332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF38615C1C2904BB00F26332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF38615F1C2904BB00F26332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,8 +111,10 @@
 		AF3861711C2904BB00F26332 /* checkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = checkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3861751C2904BB00F26332 /* checkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkUITests.swift; sourceTree = "<group>"; };
 		AF3861771C2904BB00F26332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5CF6181C39FE9600FF190A /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		AF5CF6211C39FF7400FF190A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF8A6B3D1C30D14F002347D2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		AF8A6B411C30DE2F002347D2 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailViewController.swift; path = ../EventDetailViewController.swift; sourceTree = "<group>"; };
+		AF8A6B411C30DE2F002347D2 /* ScheduleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleDetailViewController.swift; path = ../ScheduleDetailViewController.swift; sourceTree = "<group>"; };
 		AF8A6B431C31054A002347D2 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		AF8A6B461C310AA1002347D2 /* check-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "check-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF8A6B471C310AA2002347D2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
@@ -116,8 +122,8 @@
 		AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AF9B04C31C35F69F008D50DC /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
 		AF9B04C41C35F69F008D50DC /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
-		AFF434051C30B6460071B9F1 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
-		AFF434071C30C0CC0071B9F1 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		AFF434051C30B6460071B9F1 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
+		AFF434071C30C0CC0071B9F1 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		AFFAD7821C34F31C00D1483B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../../Documents/walkant/projects/checkapp/libraries/SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		AFFAD7841C34F32500D1483B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../../Documents/walkant/projects/checkapp/libraries/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		AFFF39D91C349A6600218D7B /* CheckAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAPI.swift; sourceTree = "<group>"; };
@@ -242,10 +248,10 @@
 		AFFF39D61C34998400218D7B /* views */ = {
 			isa = PBXGroup;
 			children = (
-				AF8A6B411C30DE2F002347D2 /* EventDetailViewController.swift */,
-				AFF434051C30B6460071B9F1 /* EventTableViewController.swift */,
+				AF8A6B411C30DE2F002347D2 /* ScheduleDetailViewController.swift */,
+				AFF434051C30B6460071B9F1 /* ScheduleTableViewController.swift */,
 				AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */,
-				AF3861571C2904BB00F26332 /* ViewController.swift */,
+				AF3861571C2904BB00F26332 /* LoginViewController.swift */,
 				AF8A6B431C31054A002347D2 /* MenuController.swift */,
 			);
 			name = views;
@@ -254,7 +260,7 @@
 		AFFF39D71C3499BF00218D7B /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				AFF434071C30C0CC0071B9F1 /* EventTableViewCell.swift */,
+				AFF434071C30C0CC0071B9F1 /* ScheduleTableViewCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -264,6 +270,9 @@
 			children = (
 				AFFF39D91C349A6600218D7B /* CheckAPI.swift */,
 				AF8A6B3D1C30D14F002347D2 /* Event.swift */,
+				AF5CF6181C39FE9600FF190A /* Schedule.swift */,
+				AF1632BE1C3ED6BC00A3C60B /* Checkin.swift */,
+				AF5CF6211C39FF7400FF190A /* User.swift */,
 			);
 			name = checkAPI;
 			sourceTree = "<group>";
@@ -460,18 +469,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8A6B421C30DE2F002347D2 /* EventDetailViewController.swift in Sources */,
+				AF8A6B421C30DE2F002347D2 /* ScheduleDetailViewController.swift in Sources */,
 				AF8A6B441C31054A002347D2 /* MenuController.swift in Sources */,
-				AFF434081C30C0CC0071B9F1 /* EventTableViewCell.swift in Sources */,
+				AFF434081C30C0CC0071B9F1 /* ScheduleTableViewCell.swift in Sources */,
 				AFFAD7831C34F31C00D1483B /* SwiftyJSON.swift in Sources */,
 				AF8A6B491C310AA2002347D2 /* SWRevealViewController.m in Sources */,
-				AF3861581C2904BB00F26332 /* ViewController.swift in Sources */,
-				AFF434061C30B6460071B9F1 /* EventTableViewController.swift in Sources */,
+				AF3861581C2904BB00F26332 /* LoginViewController.swift in Sources */,
+				AF5CF6221C39FF7400FF190A /* User.swift in Sources */,
+				AFF434061C30B6460071B9F1 /* ScheduleTableViewController.swift in Sources */,
 				AF8A6B4D1C311710002347D2 /* ProfileViewController.swift in Sources */,
 				AFFF39DA1C349A6600218D7B /* CheckAPI.swift in Sources */,
 				AF9B04C51C35F69F008D50DC /* KeychainWrapper.m in Sources */,
 				AF3861561C2904BB00F26332 /* AppDelegate.swift in Sources */,
+				AF5CF6191C39FE9600FF190A /* Schedule.swift in Sources */,
 				AF8A6B3E1C30D14F002347D2 /* Event.swift in Sources */,
+				AF1632BF1C3ED6BC00A3C60B /* Checkin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
