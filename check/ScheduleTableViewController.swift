@@ -47,7 +47,7 @@ class ScheduleTableViewController: UITableViewController {
     print("viewDidAppear table")
     super.viewDidAppear(false)
     self.showLoginView()
-    self.tableView?.reloadData()
+//    self.tableView?.reloadData()
   }
   
   override func didReceiveMemoryWarning() {

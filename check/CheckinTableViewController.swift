@@ -26,7 +26,7 @@ class CheckinTableViewController: UITableViewController {
       }
       
       checkins = [Checkin]()
-//      api.loadCheckins(didLoadCheckins)
+      api.loadCheckins(didLoadCheckins)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -61,18 +61,19 @@ class CheckinTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.checkins?.count ?? 0
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("checkinCell", forIndexPath: indexPath) as! CheckinTableViewCell
         // Configure the cell...
-
+        let checkin = checkins[indexPath.row]
+        cell.checkinDateLabel?.text = checkin.fulldate_in
+        cell.checkoutDateLabel?.text = checkin.fulldate_out
+        cell.eventLabel?.text = checkin.schedule.event.name
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

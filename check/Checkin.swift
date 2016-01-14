@@ -13,8 +13,10 @@ class Checkin {
   var id : Int!
   var hour_in : String!
   var date_in : String!
+  var fulldate_in : String!
   var hour_out : String!
   var date_out : String!
+  var fulldate_out : String!
   var check_out : Bool!
   var schedule: Schedule!
   
@@ -23,9 +25,11 @@ class Checkin {
     self.id = data["id"] as! Int
     self.hour_in = data["hour_in"] as! String
     self.date_in = data["date_in"] as! String
-    self.hour_out = data["hour_out"] as! String
-    self.date_out = data["date_out"] as! String
+    self.hour_out = data["hour_out"] as? String
+    self.date_out = data["date_out"] as? String
     self.check_out = data["check_out"] as! Bool
+    self.fulldate_in = "\(self.hour_in) \(self.date_in)"
+    self.fulldate_out = "\(self.hour_out) \(self.date_out)"
 
     if let scheduleData = data["schedule"] as? NSDictionary {
       self.schedule = Schedule(data: scheduleData)

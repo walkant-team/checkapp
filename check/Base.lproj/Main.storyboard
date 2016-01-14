@@ -112,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rGr-lc-bRU" id="ORJ-76-ODe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="139.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJa-Nm-OmH">
@@ -379,13 +379,13 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gqV-0V-mLt" id="hnQ-NU-sBV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoA-u3-01m">
-                                            <rect key="frame" x="8" y="12" width="359" height="133"/>
+                                            <rect key="frame" x="8" y="12" width="359" height="132.5"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDT-kW-d0k">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDT-kW-d0k">
                                                     <rect key="frame" x="0.0" y="0.0" width="359" height="67"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checkin:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFA-Cc-ka9">
@@ -419,6 +419,9 @@
                                                     </subviews>
                                                     <animations/>
                                                     <color key="backgroundColor" red="0.11543852835893631" green="0.58359283208847046" blue="0.83721369504928589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="67" id="jOD-dU-4Zb"/>
+                                                    </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Conferencia de prensa Backus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUN-tk-Ih3">
                                                     <rect key="frame" x="8" y="97" width="235" height="20"/>
@@ -437,6 +440,11 @@
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" red="0.9090832472" green="0.96136003729999997" blue="0.9972447753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="fDT-kW-d0k" firstAttribute="leading" secondItem="uoA-u3-01m" secondAttribute="leading" id="5C7-h5-a7h"/>
+                                                <constraint firstAttribute="trailing" secondItem="fDT-kW-d0k" secondAttribute="trailing" id="8t2-rT-Epm"/>
+                                                <constraint firstItem="fDT-kW-d0k" firstAttribute="top" secondItem="uoA-u3-01m" secondAttribute="top" id="AMr-eL-ZkT"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <animations/>
