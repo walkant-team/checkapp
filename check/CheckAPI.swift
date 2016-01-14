@@ -13,7 +13,6 @@ import Locksmith
 class CheckAPI {
     
   let base_url = "http://checkin.kodevianapps.com:80/api/v1"
-  var results:[JSON]? = []
   var jsonArray:NSMutableArray?
   
   var OAuthToken: String? {
