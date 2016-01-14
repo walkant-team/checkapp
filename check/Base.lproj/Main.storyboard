@@ -112,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rGr-lc-bRU" id="ORJ-76-ODe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="139.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJa-Nm-OmH">
@@ -331,9 +331,12 @@
                                     <constraint firstAttribute="height" constant="52" id="gtw-57-wDg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Check In">
+                                <state key="normal">
                                     <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988085031509399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkinAction:" destination="faN-6i-J55" eventType="touchUpInside" id="gFi-vm-6OB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -352,6 +355,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="addressLabel" destination="lOg-Qb-kfV" id="qGU-d4-PMG"/>
+                        <outlet property="checkinButton" destination="iV4-lF-706" id="BOa-C4-AMD"/>
                         <outlet property="descriptionText" destination="xHc-AY-m5V" id="Wpy-GQ-kKC"/>
                         <outlet property="scheduleLabel" destination="cCT-GI-fnn" id="eTx-KE-vVi"/>
                         <outlet property="titleLabel" destination="41t-ui-F6D" id="1vK-Vb-AoQ"/>

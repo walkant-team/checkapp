@@ -19,7 +19,8 @@ class ScheduleTableViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-  
+    
+    print("viewDidLoad table")
     // Remove the title of the back button
     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
   
@@ -36,15 +37,16 @@ class ScheduleTableViewController: UITableViewController {
       menuButton.action = "revealToggle:"
       self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
-  
+    print("viewDidLoad table")
     schedules = [Schedule]()
-    api.loadSchedules(didLoadSchedules)    
+    api.loadSchedules(didLoadSchedules)
   }
   
-  
   override func viewDidAppear(animated: Bool) {
+    print("viewDidAppear table")
     super.viewDidAppear(false)
     self.showLoginView()
+    self.tableView?.reloadData()
   }
   
   override func didReceiveMemoryWarning() {
@@ -53,6 +55,7 @@ class ScheduleTableViewController: UITableViewController {
   }
 
   func didLoadSchedules(schedules: [Schedule]){
+    print("didLoadSchedules table")
     self.schedules = schedules
     self.tableView?.reloadData()
   }
@@ -100,7 +103,7 @@ class ScheduleTableViewController: UITableViewController {
       let cell = tableView.dequeueReusableCellWithIdentifier("scheduleCell", forIndexPath: indexPath) as! ScheduleTableViewCell
 
       // Configure the cell...
-      let schedule = schedules[indexPath.row]
+      let schedule = schedules[indexPath.row]    
       cell.selectionStyle = UITableViewCellSelectionStyle.None
       cell.scheduleLabel?.text = schedule.date_time
       cell.addressLabel?.text = schedule.event.address

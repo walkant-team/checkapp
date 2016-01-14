@@ -13,17 +13,19 @@ class Checkin {
   var id : Int!
   var hour_in : String!
   var date_in : String!
+  var check_out : Bool!
   var schedule: Schedule!
   
   init(data : NSDictionary){
     
-//    self.id = data["id"] as! Int
-//    self.hour_in = data["hour_in"] as! String
-//    self.date_in = data["date_in"] as! String
-//    
-//    if let scheduleData = data["schedule"] as? NSDictionary {
-//      self.schedule = Schedule(data: scheduleData)
-//    }
+    self.id = data["id"] as! Int
+    self.hour_in = data["hour_in"] as! String
+    self.date_in = data["date_in"] as! String
+    self.check_out = data["check_out"] as! Bool
+
+    if let scheduleData = data["schedule"] as? NSDictionary {
+      self.schedule = Schedule(data: scheduleData)
+    }
     
   }
 }

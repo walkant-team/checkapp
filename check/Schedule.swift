@@ -14,11 +14,11 @@ class Schedule {
   var hour : String!
   var date : String!
   var date_time : String!
-  var checkin : Bool?
-  var checkout : Bool?
+//  var checkin : Bool?
+//  var checkout : Bool?
   var event: Event!
   var user: User!
-  
+  var checkin: Checkin?
   
   init(data : NSDictionary){
     
@@ -33,6 +33,6 @@ class Schedule {
     
     if let eventData = data["event"] as? NSDictionary {
       self.event = Event(data: eventData)
-    }
+    }        
   }
 }

@@ -54,34 +54,30 @@ class CheckAPI {
     }
   }
   
+  func logout(completion: (successful: Bool) -> ()) {
+    let urlString = base_url + "/logout/"
+    if let token = self.OAuthToken {
+      let headers = [
+        "Authorization": "token \(token)"
+      ]
+      Alamofire.request(.POST, urlString, headers: headers)
+        .responseJSON { response in
+          self.OAuthToken = nil
+          let successful = response.response?.statusCode == 200
+          completion(successful: successful)
+      }
+    }
+  }
+  
   func hasOAuthToken() -> Bool {
     if let token = self.OAuthToken {
       return !token.isEmpty
     }
     return false
   }
-
-//  func makeSignInRequest(userEmail:String, userPassword:String) {
-//    let parameters = [
-//      "username": userEmail,
-//      "password": userPassword
-//    ]
-//    Alamofire.request(.POST, "\(base_url)/login/", parameters: parameters).validate().responseJSON { response in
-//      if (response.result.value != nil) {
-//        switch response.result {
-//        case .Success:
-//          let token = response.result.value!["token"] as! String
-//          self.MyKeychainWrapper.mySetObject(token, forKey:kSecValueData)
-//          self.MyKeychainWrapper.writeToKeychain()
-//        case .Failure(let error):
-//          debugPrint(error)
-//        }
-//      }
-//    }
-//  }
   
-  func checkVerified(schedule_id:Int, completion: ((checkin: Checkin?) -> Void)!) {
-    let urlString = "\(base_url)/checkins/\(schedule_id)/verified/"
+  func checkVerified(scheduleId:Int, completion: ((checkin: Checkin?) -> Void)!) {
+    let urlString = base_url + "/checkins/\(scheduleId)/verified/"
     if let token = self.OAuthToken {
       let headers = [
         "Authorization": "token \(token)"
@@ -89,61 +85,75 @@ class CheckAPI {
       
       Alamofire.request(.GET, urlString, headers: headers).responseJSON { response in
         if let JSON = response.result.value {
-          if JSON["id"] != nil {
+          if (response.response?.statusCode == 200) {
             let checkin = Checkin(data: JSON as! NSDictionary)
-            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-            dispatch_async(dispatch_get_global_queue(priority, 0)) {
-              dispatch_async(dispatch_get_main_queue()) {
-                completion(checkin: checkin)
-              }
-            }
+            completion(checkin: checkin)            
           }
         }
       }
     }
   }
   
-  func didLoadCheckin(checkin: Checkin!){
-    
+  func checkinSchedule(scheduleId: Int, completion: (successful: Bool) -> ()) {
+    let urlString = "\(base_url)/checkins/"
+    if let token = self.OAuthToken {
+      let parameters = [
+        "schedule": scheduleId
+      ]
+      
+      let headers = [
+        "Authorization": "token \(token)"
+      ]
+      
+      Alamofire.request(.POST, urlString, headers: headers, parameters: parameters).validate().responseJSON { response in
+        let successful = response.response?.statusCode == 200
+        completion(successful: successful)
+      }
+    }
+  }
+  
+  func checkoutSchedule(checkinId: Int, completion: (successful: Bool) -> ()) {
+    let urlString = base_url + "/checkouts/\(checkinId)/retrieve/"
+    if let token = self.OAuthToken {
+      let headers = [
+        "Authorization": "token \(token)"
+      ]
+      
+      Alamofire.request(.PUT, urlString, headers: headers).validate().responseJSON { response in
+        let successful = response.response?.statusCode == 200
+        completion(successful: successful)
+      }
+    }
   }
   
   func loadSchedules(completion: (([Schedule]) -> Void)!) {
     let urlString = "\(base_url)/schedules/"
-//    let token = self.MyKeychainWrapper.myObjectForKey("v_Data")
-    let token = "51880e877b5cba803f981121e18109a9bbc5d553"
-    let headers = [
-      "Authorization": "token \(token)"
-    ]
-
-    var schedules = [Schedule]()
-    
-    Alamofire.request(.GET, urlString, headers: headers).responseJSON { response in
-      if let JSON = response.result.value {        
-        self.jsonArray = JSON["results"] as? NSMutableArray
-        for item in self.jsonArray! {
-          let schedule = Schedule(data: item as! NSDictionary)
-          let urlStringCheckin = "\(self.base_url)/checkins/\(schedule.id)/verified/"
-          
-          Alamofire.request(.GET, urlStringCheckin, headers: headers).responseJSON { response in
-            if let checkin_json = response.result.value {
-              if checkin_json["id"] != nil {
-                schedule.checkin = true
-              }
+    if let token = self.OAuthToken {
+      let headers = [
+        "Authorization": "token \(token)"
+      ]
+      
+      var schedules = [Schedule]()
+      
+      Alamofire.request(.GET, urlString, headers: headers).responseJSON { response in
+        if let JSON = response.result.value {
+          self.jsonArray = JSON["results"] as? NSMutableArray
+          for item in self.jsonArray! {
+            let schedule = Schedule(data: item as! NSDictionary)
+            self.checkVerified(schedule.id) { (checkin) -> Void in
+              schedule.checkin = checkin
             }
+            schedules.append(schedule)
           }
-          
-//        self.checkVerified(schedule.id, completion: checkin?)
-          schedule.checkin = true
-          schedules.append(schedule)
-        }
-        completion(schedules)
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-          dispatch_async(dispatch_get_main_queue()) {
-            completion(schedules)
+          completion(schedules)
+          let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+          dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            dispatch_async(dispatch_get_main_queue()) {
+              completion(schedules)
+            }
           }
         }
       }
     }
-   }
+  }
 }

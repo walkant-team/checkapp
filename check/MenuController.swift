@@ -26,13 +26,13 @@ class MenuController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
   
-  
-  @IBAction func logout(sender: AnyObject) {
-    api.OAuthToken = nil
+  @IBAction func logout(sender: AnyObject) {    
     self.performSegueWithIdentifier("logoutView", sender: self)
+    api.logout() { (successful) -> () in
+      print(successful)
+    }
   }
   
-
     // MARK: - Table view data source
 
 //    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
