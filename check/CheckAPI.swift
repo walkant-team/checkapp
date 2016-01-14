@@ -131,9 +131,7 @@ class CheckAPI {
       let headers = [
         "Authorization": "token \(token)"
       ]
-      
       var schedules = [Schedule]()
-      
       Alamofire.request(.GET, urlString, headers: headers).responseJSON { response in
         if let JSON = response.result.value {
           self.jsonArray = JSON["results"] as? NSMutableArray
@@ -144,11 +142,35 @@ class CheckAPI {
             }
             schedules.append(schedule)
           }
-          completion(schedules)
           let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
           dispatch_async(dispatch_get_global_queue(priority, 0)) {
             dispatch_async(dispatch_get_main_queue()) {
               completion(schedules)
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  func loadCheckins(completion: (([Checkin]) -> Void)!) {
+    let urlString = base_url + "/checkins/"
+    if let token = self.OAuthToken {
+      let headers = [
+        "Authorization": "token \(token)"
+      ]
+      var checkins = [Checkin]()
+      Alamofire.request(.GET, urlString, headers: headers).responseJSON { response in
+        if let JSON = response.result.value {
+          self.jsonArray = JSON["results"] as? NSMutableArray
+          for item in self.jsonArray! {
+            let checkin = Checkin(data: item as! NSDictionary)
+            checkins.append(checkin)
+          }
+          let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+          dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            dispatch_async(dispatch_get_main_queue()) {
+              completion(checkins)
             }
           }
         }
