@@ -29,8 +29,11 @@ class Checkin {
     self.date_out = data["date_out"] as? String
     self.check_out = data["check_out"] as! Bool
     self.fulldate_in = "\(self.hour_in) \(self.date_in)"
-    self.fulldate_out = "\(self.hour_out) \(self.date_out)"
-
+    if self.check_out == true {
+      self.fulldate_out = "\(self.hour_out) \(self.date_out)"
+    }else {
+      self.fulldate_out = "No se hizo checkout"
+    }
     if let scheduleData = data["schedule"] as? NSDictionary {
       self.schedule = Schedule(data: scheduleData)
     }    
