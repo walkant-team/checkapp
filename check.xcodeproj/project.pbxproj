@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF03AE421C47FAAB00E64561 /* CheckinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03AE411C47FAAB00E64561 /* CheckinTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		AF03AE4B1C47FE8E00E64561 /* CheckinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03AE4A1C47FE8E00E64561 /* CheckinTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		AF03AE421C47FAAB00E64561 /* CheckinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03AE411C47FAAB00E64561 /* CheckinTableViewController.swift */; };
+		AF03AE4B1C47FE8E00E64561 /* CheckinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03AE4A1C47FE8E00E64561 /* CheckinTableViewCell.swift */; };
 		AF03AE511C480DA400E64561 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF03AE501C480DA400E64561 /* Alamofire.framework */; };
 		AF03AE531C480DA800E64561 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF03AE521C480DA800E64561 /* Locksmith.framework */; };
 		AF03AE551C480DAB00E64561 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF03AE541C480DAB00E64561 /* SwiftyJSON.framework */; };
-		AF1632BF1C3ED6BC00A3C60B /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1632BE1C3ED6BC00A3C60B /* Checkin.swift */; settings = {ASSET_TAGS = (); }; };
+		AF1632BF1C3ED6BC00A3C60B /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1632BE1C3ED6BC00A3C60B /* Checkin.swift */; };
 		AF3861561C2904BB00F26332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861551C2904BB00F26332 /* AppDelegate.swift */; };
 		AF3861581C2904BB00F26332 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861571C2904BB00F26332 /* LoginViewController.swift */; };
 		AF38615B1C2904BB00F26332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3861591C2904BB00F26332 /* Main.storyboard */; };
@@ -20,16 +20,15 @@
 		AF3861601C2904BB00F26332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF38615E1C2904BB00F26332 /* LaunchScreen.storyboard */; };
 		AF38616B1C2904BB00F26332 /* checkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38616A1C2904BB00F26332 /* checkTests.swift */; };
 		AF3861761C2904BB00F26332 /* checkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861751C2904BB00F26332 /* checkUITests.swift */; };
-		AF5CF6191C39FE9600FF190A /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CF6181C39FE9600FF190A /* Schedule.swift */; settings = {ASSET_TAGS = (); }; };
-		AF5CF6221C39FF7400FF190A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CF6211C39FF7400FF190A /* User.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8A6B3E1C30D14F002347D2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B3D1C30D14F002347D2 /* Event.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8A6B421C30DE2F002347D2 /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B411C30DE2F002347D2 /* ScheduleDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8A6B441C31054A002347D2 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B431C31054A002347D2 /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8A6B491C310AA2002347D2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B481C310AA2002347D2 /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
-		AF8A6B4D1C311710002347D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		AFF434061C30B6460071B9F1 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434051C30B6460071B9F1 /* ScheduleTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		AFF434081C30C0CC0071B9F1 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434071C30C0CC0071B9F1 /* ScheduleTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		AFFF39DA1C349A6600218D7B /* CheckAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF39D91C349A6600218D7B /* CheckAPI.swift */; settings = {ASSET_TAGS = (); }; };
+		AF5CF6191C39FE9600FF190A /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CF6181C39FE9600FF190A /* Schedule.swift */; };
+		AF5CF6221C39FF7400FF190A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CF6211C39FF7400FF190A /* User.swift */; };
+		AF8A6B3E1C30D14F002347D2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B3D1C30D14F002347D2 /* Event.swift */; };
+		AF8A6B421C30DE2F002347D2 /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B411C30DE2F002347D2 /* ScheduleDetailViewController.swift */; };
+		AF8A6B441C31054A002347D2 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B431C31054A002347D2 /* MenuController.swift */; };
+		AF8A6B4D1C311710002347D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */; };
+		AFF434061C30B6460071B9F1 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434051C30B6460071B9F1 /* ScheduleTableViewController.swift */; };
+		AFF434081C30C0CC0071B9F1 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434071C30C0CC0071B9F1 /* ScheduleTableViewCell.swift */; };
+		AFFF39DA1C349A6600218D7B /* CheckAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF39D91C349A6600218D7B /* CheckAPI.swift */; };
 		CA7F69E1CD228D2166C83F45 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1328A1B7982A479EA0BCBF02 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,8 +76,6 @@
 		AF8A6B411C30DE2F002347D2 /* ScheduleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleDetailViewController.swift; path = ../ScheduleDetailViewController.swift; sourceTree = "<group>"; };
 		AF8A6B431C31054A002347D2 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		AF8A6B461C310AA1002347D2 /* check-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "check-Bridging-Header.h"; sourceTree = "<group>"; };
-		AF8A6B471C310AA2002347D2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
-		AF8A6B481C310AA2002347D2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AFF434051C30B6460071B9F1 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		AFF434071C30C0CC0071B9F1 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
@@ -195,8 +192,6 @@
 		AF8A6B451C310A70002347D2 /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF8A6B471C310AA2002347D2 /* SWRevealViewController.h */,
-				AF8A6B481C310AA2002347D2 /* SWRevealViewController.m */,
 				AF8A6B461C310AA1002347D2 /* check-Bridging-Header.h */,
 			);
 			name = SWRevealViewController;
@@ -424,7 +419,6 @@
 				AF8A6B421C30DE2F002347D2 /* ScheduleDetailViewController.swift in Sources */,
 				AF8A6B441C31054A002347D2 /* MenuController.swift in Sources */,
 				AFF434081C30C0CC0071B9F1 /* ScheduleTableViewCell.swift in Sources */,
-				AF8A6B491C310AA2002347D2 /* SWRevealViewController.m in Sources */,
 				AF3861581C2904BB00F26332 /* LoginViewController.swift in Sources */,
 				AF5CF6221C39FF7400FF190A /* User.swift in Sources */,
 				AFF434061C30B6460071B9F1 /* ScheduleTableViewController.swift in Sources */,

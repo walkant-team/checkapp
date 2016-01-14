@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SWRevealViewController
 
 class ScheduleTableViewController: UITableViewController {
   @IBOutlet var menuButton:UIBarButtonItem!
