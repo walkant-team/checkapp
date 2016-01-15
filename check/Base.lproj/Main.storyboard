@@ -202,7 +202,7 @@
             </objects>
             <point key="canvasLocation" x="785" y="331"/>
         </scene>
-        <!--Schedule Detail View Controller-->
+        <!--Title-->
         <scene sceneID="IM4-08-I9H">
             <objects>
                 <viewController id="faN-6i-J55" customClass="ScheduleDetailViewController" customModule="check" customModuleProvider="target" sceneMemberID="viewController">
@@ -332,6 +332,14 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="UdR-UP-DON">
+                        <barButtonItem key="rightBarButtonItem" image="car" id="7mD-kP-SvS">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="0Jh-au-sSa" kind="presentation" identifier="showMap" id="l84-bb-wAw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -347,6 +355,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hH-zM-ra0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1183" y="1296"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="aXg-ie-Hjk">
+            <objects>
+                <viewController id="0Jh-au-sSa" customClass="MapViewController" customModule="check" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="867-gE-prr"/>
+                        <viewControllerLayoutGuide type="bottom" id="67E-lO-R2M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZnF-Z1-x1r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMw-ui-trv" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="652"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-Kw-neH">
+                                        <rect key="frame" x="312" y="34" width="94" height="29"/>
+                                        <state key="normal" image="car"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eh-BN-sM8">
+                                        <rect key="frame" x="29" y="33" width="30" height="30"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <segue destination="v6j-U8-T4g" kind="unwind" unwindAction="unwindSegue:" id="113-8r-3ia"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96999961137771606" green="0.93468672037124634" blue="0.93424016237258911" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="fMw-ui-trv" id="WbX-Es-D5r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dp-Wf-dAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="v6j-U8-T4g" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="1269"/>
         </scene>
         <!--Historial-->
         <scene sceneID="MX7-fm-7Px">
@@ -709,6 +758,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="car" width="40" height="29"/>
         <image name="logo" width="118" height="58"/>
         <image name="menu" width="22" height="22"/>
         <image name="unckeck" width="64" height="64"/>

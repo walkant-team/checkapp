@@ -86,11 +86,11 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
         
-        let carBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        carBtn.setImage(UIImage(named: "car"), forState: UIControlState.Normal)
-//        carBtn.addTarget(self.navigationController, action: "", forControlEvents:  UIControlEvents.TouchUpInside)
-        let item = UIBarButtonItem(customView: carBtn)
-        self.navigationItem.rightBarButtonItem = item
+//        let carBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+//        carBtn.setImage(UIImage(named: "car"), forState: UIControlState.Normal)
+////        carBtn.addTarget(self.navigationController, action: "", forControlEvents:  UIControlEvents.TouchUpInside)
+//        let item = UIBarButtonItem(customView: carBtn)
+//        self.navigationItem.rightBarButtonItem = item
     }
 
   @IBAction func checkinAction(sender: AnyObject) {
@@ -151,5 +151,14 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "showMap" {
+            let destinationController = segue.destinationViewController as! MapViewController
+            destinationController.event = schedule.event
+        }
+    }
 
 }
