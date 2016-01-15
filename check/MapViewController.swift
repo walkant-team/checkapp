@@ -18,6 +18,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         let latitude = event.latitude
+       
         let longitude = event.longitude
         
         let camera = GMSCameraPosition.cameraWithLatitude(latitude, longitude: longitude, zoom: 14)
@@ -47,5 +48,37 @@ class MapViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func sharedUbication(sender: AnyObject) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let googleAction = UIAlertAction(title: "Google", style: .Default, handler: googleHandler)
+        let wazeAction = UIAlertAction(title: "Waze", style: .Default, handler: wazeHandler)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Cancelled")
+        })
+        
+        actionSheet.addAction(googleAction)
+        actionSheet.addAction(wazeAction)
+        actionSheet.addAction(cancelAction)
+    
+        self.presentViewController(actionSheet, animated: true, completion: nil)
+    }
+    
+    func googleHandler(alert: UIAlertAction) {
+        if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
+            UIApplication.sharedApplication().openURL(NSURL(string:
+                "comgooglemaps://?daddr=-12.100744,-76.9999517&directionsmode=driving")!)
+        } else {
+            print("Can't use comgooglemaps://");
+        }
+    }
+    
+    func wazeHandler(alert: UIAlertAction) {
+        if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"waze://")!)) {
+            UIApplication.sharedApplication().openURL(NSURL(string:
+                "waze://?ll=-12.100503,-76.997817&navigate=yes")!)
+        } else {
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://itunes.apple.com/us/app/id323229106")!)
+        }        
+    }
 }
