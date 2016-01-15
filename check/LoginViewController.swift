@@ -9,7 +9,7 @@
 import UIKit
 import Locksmith
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailLabel: UITextField!
     @IBOutlet weak var passwordLabel: UITextField!
@@ -29,7 +29,13 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-      
+  
+  // hidden keyboard
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    passwordLabel.resignFirstResponder()
+    return true
+  }
+  
   
     @IBAction func signinBtnTapped(sender: AnyObject) {
       

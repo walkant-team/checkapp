@@ -17,7 +17,7 @@ class CheckinTableViewController: UITableViewController {
   let api = CheckAPI()
   
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
       
       if revealViewController() != nil {
         menuButton.target = revealViewController()
@@ -67,11 +67,12 @@ class CheckinTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("checkinCell", forIndexPath: indexPath) as! CheckinTableViewCell
         // Configure the cell...
-        let checkin = checkins[indexPath.row]
-        cell.checkinDateLabel?.text = checkin.fulldate_in
-        cell.checkoutDateLabel?.text = checkin.fulldate_out
-        cell.eventLabel?.text = checkin.schedule.event.name
-        return cell
+      cell.selectionStyle = UITableViewCellSelectionStyle.None
+      let checkin = checkins[indexPath.row]
+      cell.checkinDateLabel?.text = checkin.fulldate_in
+      cell.checkoutDateLabel?.text = checkin.fulldate_out
+      cell.eventLabel?.text = checkin.schedule.event.name
+      return cell
     }
 
 

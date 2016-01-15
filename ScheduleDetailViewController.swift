@@ -41,7 +41,6 @@ class ScheduleDetailViewController: UIViewController {
       }else {
         self.checkinButton.hidden = true
       }
-      print("viewDidLoad cell")
       super.viewDidLoad()
     }
   
@@ -49,7 +48,6 @@ class ScheduleDetailViewController: UIViewController {
     self.schedule.checkin = checkin
   }
   
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

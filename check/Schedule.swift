@@ -25,11 +25,7 @@ class Schedule {
     self.id = data["id"] as! Int
     self.hour = data["hour"] as! String
     self.date = data["date"] as! String
-    self.date_time = "\(self.date) \(self.hour)"
-    
-    if let userData = data["user"] as? NSDictionary {
-      self.user = User(data: userData)
-    }
+    self.date_time = "\(self.date) \(self.hour)"       
     
     if let eventData = data["event"] as? NSDictionary {
       self.event = Event(data: eventData)

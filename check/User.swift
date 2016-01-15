@@ -10,13 +10,19 @@ import Foundation
 
 class User {
   
-  var userId : Int!
-  var username : String!
+  var id : Int!
+  var first_name : String!
+  var last_name : String!
+  var address : String!
+  var email : String!
+  var full_name : String!
   
-  init(data : NSDictionary){
-    
-    self.userId = data["id"] as! Int
-//    self.username = Utils.getStringFromJSON(data, key: "username")
+  init(data : NSDictionary){        
+    self.id = data["id"] as! Int
+    self.first_name = data["first_name"] as! String
+    self.last_name = data["last_name"] as! String
+    self.email = data["email"] as! String
+    self.full_name = "\(self.first_name) \(self.last_name)"
+    self.address = data["address"] as! String
   }
-  
 }

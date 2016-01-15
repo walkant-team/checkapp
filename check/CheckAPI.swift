@@ -177,4 +177,22 @@ class CheckAPI {
       }
     }
   }
+  
+  func loadProfile(completion: ((user: User?) -> Void)!) {
+    let urlString = base_url + "/users/retrieve/"
+    
+    if let token = self.OAuthToken {
+      let headers = [
+        "Authorization": "token \(token)"
+      ]
+      Alamofire.request(.GET, urlString, headers: headers).responseJSON { response in
+        if let JSON = response.result.value {
+          if (response.response?.statusCode == 200) {
+            let user = User(data: JSON as! NSDictionary)
+            completion(user: user)
+          }
+        }
+      }
+    }
+  }
 }

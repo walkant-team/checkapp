@@ -10,7 +10,13 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var menuButton:UIBarButtonItem!
+  @IBOutlet weak var menuButton:UIBarButtonItem!
+  @IBOutlet weak var fullnameLabel: UILabel!
+  @IBOutlet weak var emailLabel: UILabel!
+  @IBOutlet weak var addressLabel: UILabel!
+  
+  
+    let api = CheckAPI()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +26,11 @@ class ProfileViewController: UIViewController {
             menuButton.action = "revealToggle:"
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+      api.loadProfile { (user) -> Void in
+        self.fullnameLabel.text = user?.full_name
+        self.emailLabel.text = user?.email
+        self.addressLabel.text = user?.address
+      }
     }
 
     override func didReceiveMemoryWarning() {

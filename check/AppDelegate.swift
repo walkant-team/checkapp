@@ -23,12 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func prepareNavigationBarAppearance() {
     
-    UINavigationBar.appearance().barTintColor = UIColor(red:0.16, green:0.59, blue:0.83, alpha:1.0)
-    UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+    let BarColor = UIColor(red:0.037, green:0.468, blue:0.707, alpha:1.0)
     
-    if let barFont = UIFont(name: "Avenir-Light", size: 18.0) {
-      UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:barFont]
-    }
+    UINavigationBar.appearance().barTintColor = BarColor
+    UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+    UINavigationBar.appearance().translucent = false
+    
+    let font = UIFont(name: "Avenir", size: 20)!
+    let regularVertical = UITraitCollection(verticalSizeClass:.Regular)
+    let titleDict : Dictionary = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: font]
+    
+    UINavigationBar.appearanceForTraitCollection(regularVertical).titleTextAttributes = titleDict
     
     // Change the status bar's appearance
     UIApplication.sharedApplication().statusBarStyle = .LightContent
