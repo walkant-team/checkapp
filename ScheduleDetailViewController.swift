@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import Alamofire
 
-class ScheduleDetailViewController: UIViewController {    
+class ScheduleDetailViewController: UIViewController, UIDocumentInteractionControllerDelegate {
 
     @IBOutlet var titleLabel:UILabel!
     @IBOutlet var scheduleLabel:UILabel!
     @IBOutlet var addressLabel:UILabel!
     @IBOutlet var descriptionText:UITextView!
     @IBOutlet weak var checkinButton: UIButton!
+    @IBOutlet weak var fileButton: UIButton!
   
     let checkinButtonTag = 0
     let checkoutButtonTag = 1
+    
+    let documentInteractionController = UIDocumentInteractionController()
+    var finalPath: NSURL?
   
     let api = CheckAPI()
     var schedule : Schedule!
@@ -41,6 +46,11 @@ class ScheduleDetailViewController: UIViewController {
       }else {
         self.checkinButton.hidden = true
       }
+        
+      if (self.schedule.event.file == nil) {
+        fileButton.hidden = true
+      }
+        
       print("viewDidLoad cell")
       super.viewDidLoad()
     }
@@ -83,6 +93,41 @@ class ScheduleDetailViewController: UIViewController {
       }
     }    
   }
+    
+    @IBAction func fileButtonAction(sender: AnyObject) {
+        let file_url = self.schedule.event.file! as String
+        Alamofire.download(.GET, file_url) { temporaryURL, response in
+            let fileManager = NSFileManager.defaultManager()
+            let directoryURL = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+            let pathComponent = response.suggestedFilename
+            
+            self.finalPath = directoryURL.URLByAppendingPathComponent(pathComponent!)
+            
+            if NSFileManager.defaultManager().fileExistsAtPath(self.finalPath!.path!) {
+                try! NSFileManager.defaultManager().removeItemAtURL(self.finalPath!)
+            }
+            
+            return self.finalPath!
+        }
+        .response { _, _, _, error in
+            if let error = error {
+                print("Failed with error: \(error)")
+            } else {
+                print("Downloaded file successfully")
+                if (self.finalPath != nil){
+                    self.documentInteractionController.URL = self.finalPath
+                    self.documentInteractionController.delegate = self
+                    self.documentInteractionController.presentPreviewAnimated(true)
+                }
+            }
+        }
+
+    }
+    
+    func documentInteractionControllerViewControllerForPreview(controller: UIDocumentInteractionController) -> UIViewController {
+        return self
+    }
+
     /*
     // MARK: - Navigation
 

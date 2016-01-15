@@ -127,13 +127,19 @@ class CheckAPI {
   
   func loadSchedules(completion: (([Schedule]) -> Void)!) {
     let urlString = "\(base_url)/schedules/"
+    print(self.OAuthToken)
     if let token = self.OAuthToken {
-      let headers = [
-        "Authorization": "token \(token)"
-      ]
+//      let headers = [
+//        "Authorization": "token \(token)"
+//      ]
+        let headers = [
+            "Authorization": "token e3e016baa30a7aaa40f107dd33f0c61445b37bca"
+        ]
+
       var schedules = [Schedule]()
       Alamofire.request(.GET, urlString, headers: headers).responseJSON { response in
         if let JSON = response.result.value {
+            print(JSON["results"])
           self.jsonArray = JSON["results"] as? NSMutableArray
           for item in self.jsonArray! {
             let schedule = Schedule(data: item as! NSDictionary)

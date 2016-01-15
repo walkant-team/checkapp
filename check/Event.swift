@@ -17,6 +17,7 @@ class Event {
   var latitude : String
   var description : String!
   var is_enabled : Bool!
+  var file: String?
   
   init(data : NSDictionary){
     self.eventId = data["id"] as! Int
@@ -26,5 +27,6 @@ class Event {
     self.latitude = data["latitude"] as! String
     self.description = data["description"] as! String
     self.is_enabled = data["is_enabled"] as! Bool
+    self.file = data["file_1"] as? String
   }
 }
