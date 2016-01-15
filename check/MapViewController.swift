@@ -18,7 +18,6 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         let latitude = event.latitude
-       
         let longitude = event.longitude
         
         let camera = GMSCameraPosition.cameraWithLatitude(latitude, longitude: longitude, zoom: 14)
@@ -67,7 +66,7 @@ class MapViewController: UIViewController {
     func googleHandler(alert: UIAlertAction) {
         if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
             UIApplication.sharedApplication().openURL(NSURL(string:
-                "comgooglemaps://?daddr=-12.100744,-76.9999517&directionsmode=driving")!)
+                "comgooglemaps://?daddr=\(event.latitude),\(event.longitude)&directionsmode=driving")!)
         } else {
             print("Can't use comgooglemaps://");
         }
@@ -76,7 +75,7 @@ class MapViewController: UIViewController {
     func wazeHandler(alert: UIAlertAction) {
         if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"waze://")!)) {
             UIApplication.sharedApplication().openURL(NSURL(string:
-                "waze://?ll=-12.100503,-76.997817&navigate=yes")!)
+                "waze://?ll=\(event.latitude),\(event.longitude)&navigate=yes")!)
         } else {
             UIApplication.sharedApplication().openURL(NSURL(string: "http://itunes.apple.com/us/app/id323229106")!)
         }        
