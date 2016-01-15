@@ -314,6 +314,10 @@
                                     <action selector="checkinAction:" destination="faN-6i-J55" eventType="touchUpInside" id="gFi-vm-6OB"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzF-vr-ZGx">
+                                <rect key="frame" x="14" y="208" width="392" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
