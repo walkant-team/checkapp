@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8276ABBB1C48F95B0048EAD9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276ABBA1C48F95B0048EAD9 /* MapViewController.swift */; };
 		AF03AE421C47FAAB00E64561 /* CheckinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03AE411C47FAAB00E64561 /* CheckinTableViewController.swift */; };
 		AF03AE4B1C47FE8E00E64561 /* CheckinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03AE4A1C47FE8E00E64561 /* CheckinTableViewCell.swift */; };
 		AF03AE511C480DA400E64561 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF03AE501C480DA400E64561 /* Alamofire.framework */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		1328A1B7982A479EA0BCBF02 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8276ABBA1C48F95B0048EAD9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AF03AE411C47FAAB00E64561 /* CheckinTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinTableViewController.swift; sourceTree = "<group>"; };
 		AF03AE4A1C47FE8E00E64561 /* CheckinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinTableViewCell.swift; sourceTree = "<group>"; };
 		AF03AE501C480DA400E64561 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				AF3861571C2904BB00F26332 /* LoginViewController.swift */,
 				AF8A6B431C31054A002347D2 /* MenuController.swift */,
 				AF03AE411C47FAAB00E64561 /* CheckinTableViewController.swift */,
+				8276ABBA1C48F95B0048EAD9 /* MapViewController.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				AF03AE421C47FAAB00E64561 /* CheckinTableViewController.swift in Sources */,
 				AF03AE4B1C47FE8E00E64561 /* CheckinTableViewCell.swift in Sources */,
 				AF8A6B3E1C30D14F002347D2 /* Event.swift in Sources */,
+				8276ABBB1C48F95B0048EAD9 /* MapViewController.swift in Sources */,
 				AF1632BF1C3ED6BC00A3C60B /* Checkin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

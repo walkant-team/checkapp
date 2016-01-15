@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import GoogleMaps
+import Alamofire
 
-class ScheduleDetailViewController: UIViewController {    
+class ScheduleDetailViewController: UIViewController, UIDocumentInteractionControllerDelegate {
 
     @IBOutlet var titleLabel:UILabel!
     @IBOutlet var scheduleLabel:UILabel!
     @IBOutlet var addressLabel:UILabel!
     @IBOutlet var descriptionText:UITextView!
     @IBOutlet weak var checkinButton: UIButton!
+    @IBOutlet weak var fileButton: UIButton!
+    @IBOutlet weak var mapView: GMSMapView!
   
     let checkinButtonTag = 0
     let checkoutButtonTag = 1
+    
+    let documentInteractionController = UIDocumentInteractionController()
+    var finalPath: NSURL?
   
     let api = CheckAPI()
     var schedule : Schedule!
@@ -41,7 +48,25 @@ class ScheduleDetailViewController: UIViewController {
       }else {
         self.checkinButton.hidden = true
       }
+        
+      if (self.schedule.event.file == nil) {
+        fileButton.hidden = true
+      }
+        
+
       super.viewDidLoad()
+        
+        let latitude = schedule.event.latitude
+        let longitude = schedule.event.longitude
+        
+        let camera = GMSCameraPosition.cameraWithLatitude(latitude, longitude: longitude, zoom: 14)
+        self.mapView.camera = camera
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2DMake(latitude, longitude)
+        marker.title = schedule.event.name
+        marker.snippet = schedule.event.description
+        marker.map = mapView
     }
   
   func didLoadCheckin(checkin: Checkin?){
@@ -60,11 +85,11 @@ class ScheduleDetailViewController: UIViewController {
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
         
-        let carBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        carBtn.setImage(UIImage(named: "car"), forState: UIControlState.Normal)
-//        carBtn.addTarget(self.navigationController, action: "", forControlEvents:  UIControlEvents.TouchUpInside)
-        let item = UIBarButtonItem(customView: carBtn)
-        self.navigationItem.rightBarButtonItem = item
+//        let carBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+//        carBtn.setImage(UIImage(named: "car"), forState: UIControlState.Normal)
+////        carBtn.addTarget(self.navigationController, action: "", forControlEvents:  UIControlEvents.TouchUpInside)
+//        let item = UIBarButtonItem(customView: carBtn)
+//        self.navigationItem.rightBarButtonItem = item
     }
 
   @IBAction func checkinAction(sender: AnyObject) {
@@ -81,6 +106,41 @@ class ScheduleDetailViewController: UIViewController {
       }
     }    
   }
+    
+    @IBAction func fileButtonAction(sender: AnyObject) {
+        let file_url = self.schedule.event.file! as String
+        Alamofire.download(.GET, file_url) { temporaryURL, response in
+            let fileManager = NSFileManager.defaultManager()
+            let directoryURL = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+            let pathComponent = response.suggestedFilename
+            
+            self.finalPath = directoryURL.URLByAppendingPathComponent(pathComponent!)
+            
+            if NSFileManager.defaultManager().fileExistsAtPath(self.finalPath!.path!) {
+                try! NSFileManager.defaultManager().removeItemAtURL(self.finalPath!)
+            }
+            
+            return self.finalPath!
+        }
+        .response { _, _, _, error in
+            if let error = error {
+                print("Failed with error: \(error)")
+            } else {
+                print("Downloaded file successfully")
+                if (self.finalPath != nil){
+                    self.documentInteractionController.URL = self.finalPath
+                    self.documentInteractionController.delegate = self
+                    self.documentInteractionController.presentPreviewAnimated(true)
+                }
+            }
+        }
+
+    }
+    
+    func documentInteractionControllerViewControllerForPreview(controller: UIDocumentInteractionController) -> UIViewController {
+        return self
+    }
+
     /*
     // MARK: - Navigation
 
@@ -90,5 +150,14 @@ class ScheduleDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "showMap" {
+            let destinationController = segue.destinationViewController as! MapViewController
+            destinationController.event = schedule.event
+        }
+    }
 
 }

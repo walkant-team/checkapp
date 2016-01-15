@@ -7,48 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00CF2610AB74B65FDC43A5F2BE4DD0DF /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8603C6DC632F5CB7CA2A197561BABC /* SwiftyJSON-dummy.m */; };
-		03F494989CC1A8857B68A317D5D6860F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6BBBE41123EC05B41090D9E611994A /* Response.swift */; };
-		0681ADC8BAE2C3185F13487BAAB4D9DD /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F653DC5394571896C0932EBF40E70 /* Upload.swift */; };
-		0E86547FEAF743D079231E738B75298D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C5B3FD48772F1B9458A4D63D7A6CF6 /* SwiftyJSON.swift */; };
-		10113E207516DDCAC19E3B2FED7E12C4 /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18519304EBE28787BBA7CEC4EFE333 /* LocksmithError.swift */; };
-		13EB929F72B356FC41F08CCF85D5D0C1 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 449CEC11C1A500E4E6803D9C7F6041AD /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1495BCB330D338CEF2E39D10082B941C /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802272B022674B2276FD20945820B798 /* LocksmithAccessibleOption.swift */; };
-		19E1325694D581ACC0D726C05C528419 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 10650D519CF8A7D7BBA83A565A670916 /* SWRevealViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D0DAA9885CF7AAC83029ECA0B4ADCC9 /* SWRevealViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EA168D93DD72ACF731DCE8328B4DDE /* SWRevealViewController-dummy.m */; };
+		00CF2610AB74B65FDC43A5F2BE4DD0DF /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D9068AAEC5533773D6870862C7A2EA /* SwiftyJSON-dummy.m */; };
+		03F494989CC1A8857B68A317D5D6860F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD92388208BF9A971ABA8112FF57772B /* Response.swift */; };
+		0681ADC8BAE2C3185F13487BAAB4D9DD /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E5909F295491306693858F43C08FEA /* Upload.swift */; };
+		0E86547FEAF743D079231E738B75298D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453AA4431FC6C9BEF5D817100A429C9 /* SwiftyJSON.swift */; };
+		10113E207516DDCAC19E3B2FED7E12C4 /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15588BFD8B1AD31CB8BC93BD8CA6B183 /* LocksmithError.swift */; };
+		13EB929F72B356FC41F08CCF85D5D0C1 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 503107BE3D306CD397A26EFC222DF58E /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1495BCB330D338CEF2E39D10082B941C /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1CA8729FF1F15DD44DCD8C36BD6AD /* LocksmithAccessibleOption.swift */; };
+		19E1325694D581ACC0D726C05C528419 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5A303278371068555580C8DF1D8A84 /* SWRevealViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D0DAA9885CF7AAC83029ECA0B4ADCC9 /* SWRevealViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9584082D3D295110B8152397DF71614 /* SWRevealViewController-dummy.m */; };
 		2B9993AD278B32B911EE836E6CE5DD84 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C5450AC69398958CF6F7539EF7D99E5 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 391DDC63BEC355370B57748A4D7D20B9 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C5450AC69398958CF6F7539EF7D99E5 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEB6A07D1A57A2F2423BC1456FE67A6E /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B2E0920A4924C066583D05A2F79EF4 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
-		3B629068F4BE1D7821957056F25E33C1 /* Locksmith-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D2DC30C091AFFDA0EC265B1B9D59E /* Locksmith-dummy.m */; };
-		46485D36E37F397B7F56EE76B3382C85 /* Dictionary_Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC32103A47AE9077BBFAC094FB9C2F /* Dictionary_Initializers.swift */; };
-		4C8A77982784809D39A8788437FADF19 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB545E8367CBD0F4889F2F8AD4A7D8E4 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4DE5FCC41D100B113B6645EA64410F16 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F3F1331533065A8CA50327B1488E6 /* ParameterEncoding.swift */; };
-		5C9BDDBB790ACE3711E8AD09A13E0FB2 /* LocksmithSecurityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80368CAFCB222B99C82E4738CA6C2462 /* LocksmithSecurityClass.swift */; };
-		612A5931CEEFDFA056FE645BDD784469 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359296F823BF0625BC798276ECA3C22 /* Locksmith.swift */; };
-		80F496237530D382A045A29654D8C11C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB1D08FE562BF934219841253D09B42 /* ServerTrustPolicy.swift */; };
-		82971968CBDAB224212EEB4607C9FB8D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F8091A629DA2338B5BE25A2EE65C34 /* Result.swift */; };
-		8399DBEE3E2D98EB1F466132E476F4D9 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746C2B89486A588C6971DB7AF98A385 /* MultipartFormData.swift */; };
+		3B629068F4BE1D7821957056F25E33C1 /* Locksmith-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 421223DEEFA1F79838947370F1819DB5 /* Locksmith-dummy.m */; };
+		46485D36E37F397B7F56EE76B3382C85 /* Dictionary_Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D3BFA13E07DFD94184B78FF3640F98 /* Dictionary_Initializers.swift */; };
+		4C8A77982784809D39A8788437FADF19 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E470D6D4287BB5A1062183FBBFDF8A0C /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DE5FCC41D100B113B6645EA64410F16 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662DF55CDCC673CC5A4E26ED26307C04 /* ParameterEncoding.swift */; };
+		5C9BDDBB790ACE3711E8AD09A13E0FB2 /* LocksmithSecurityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A91A6EB9962F91A58580EDDEF4E7DCC /* LocksmithSecurityClass.swift */; };
+		612A5931CEEFDFA056FE645BDD784469 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56CD8291EEF66F16C841DC353E1DA6 /* Locksmith.swift */; };
+		80F496237530D382A045A29654D8C11C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD50683A821E495FD704856184DFF /* ServerTrustPolicy.swift */; };
+		82971968CBDAB224212EEB4607C9FB8D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC3BD278F7C2A8A1E8C7B701B5514A /* Result.swift */; };
+		8399DBEE3E2D98EB1F466132E476F4D9 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF45AB572F6B7F632BB54B7F79B2159 /* MultipartFormData.swift */; };
 		8CED5FE3391EE2CA5B58BD2A68EDB90D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
 		96D99D0C2472535A169DED65CB231CD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
 		985D0479F8FA352B916BDBFBF9B945E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
-		A2C172FE407C0BC3478ADCA91A6C9CEC /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F57C4E227C1F4ABF4904C1331996A /* Manager.swift */; };
-		A3505FA2FB3067D53847AD288AC04F03 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4606C563D772E2744525ACB91E9A250 /* Download.swift */; };
-		AA0B9C265F96CA310C674C330D4C5592 /* Locksmith.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF4DD3608343B8917197CB361C76F3D /* Locksmith.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0FB4B01682814B9E3D32F9DC4A5E762 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F360C289250290211F12224EDDFBF /* Alamofire.swift */; };
-		B27735E66C9A17D5394CDA5DEC687F42 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F04B56C9B3DBF0984C56BE8B5145C52C /* SWRevealViewController.m */; };
-		B6D2DC3E3DA44CD382B9B425F40E11C1 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EFD069EC6FFB76AF4C9D68BDFBAA1F /* Alamofire-dummy.m */; };
-		C75519F0450166A6F28126ECC7664E9C /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E319B6C8C237E8E6078B3AAA1317C648 /* Validation.swift */; };
+		A2C172FE407C0BC3478ADCA91A6C9CEC /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724BADE49A5A4412837ABE7F070ED620 /* Manager.swift */; };
+		A3505FA2FB3067D53847AD288AC04F03 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7C99D0836F9A85FEC301BACE77C4E1 /* Download.swift */; };
+		AA0B9C265F96CA310C674C330D4C5592 /* Locksmith.h in Headers */ = {isa = PBXBuildFile; fileRef = A87393D675EFFFB16EBB8B8C530C0C64 /* Locksmith.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0FB4B01682814B9E3D32F9DC4A5E762 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3347A7E17609365C0DABD1F9A3365AE6 /* Alamofire.swift */; };
+		B27735E66C9A17D5394CDA5DEC687F42 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2029007F7854414197DB338B9455D8 /* SWRevealViewController.m */; };
+		B6D2DC3E3DA44CD382B9B425F40E11C1 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A153164C39E2CE64473561EFCCC0B57 /* Alamofire-dummy.m */; };
+		C75519F0450166A6F28126ECC7664E9C /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9108A6A65AAEF1E5BACD8FDF1F23136C /* Validation.swift */; };
 		CBC2A8F73C643D953D29A489A033FFAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
-		CC2443BEF39BB4254C340BAA445BCBD5 /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B55216E9943B79C97573616461C4C4 /* LocksmithInternetAuthenticationType.swift */; };
-		D21B7325B3642887BFBE977E021F2D26 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00C9E8A5BB9AA3D4B37C45C78134C5 /* ResponseSerialization.swift */; };
-		D234B23ACC5F69B9BE581EC70C15F8DE /* LocksmithInternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A6C5FCDF1BDDBA54BE242BBF9CD4E5 /* LocksmithInternetProtocol.swift */; };
-		D75CA395D510E08C404E55F5BDAE55CE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD23009AB942AD6B3DBF15DFD986D6 /* Error.swift */; };
-		DCE545AC9FE9EDC71BAA76D97C1F6180 /* SWRevealViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E57F15C22EE65A26774A24C6DBB5059 /* SWRevealViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC2443BEF39BB4254C340BAA445BCBD5 /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0923A4649C8FD0CC0D447C69461EAF7A /* LocksmithInternetAuthenticationType.swift */; };
+		D21B7325B3642887BFBE977E021F2D26 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776EDD2572E484E3180BBA4EBD9A640 /* ResponseSerialization.swift */; };
+		D234B23ACC5F69B9BE581EC70C15F8DE /* LocksmithInternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9041BD0B05033F2F24285265439C40C4 /* LocksmithInternetProtocol.swift */; };
+		D75CA395D510E08C404E55F5BDAE55CE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23713CD4DE2533AC453661C6843BB6C2 /* Error.swift */; };
+		DCE545AC9FE9EDC71BAA76D97C1F6180 /* SWRevealViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBED7734E0F7D6A37DA12C9A6A6A1F9F /* SWRevealViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECE6C646AD2118F84FD9FBE3594A3B68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
 		F8C10BCF78AFD5231A37F1825B614C18 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8398B3D0EB66636F9DF19257E36C76C3 /* Security.framework */; };
-		FC14480CECE872865A9C6E584F886DA3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D852FCFA88EAA8BF31B4A41F8CEA9F /* Request.swift */; };
+		FC14480CECE872865A9C6E584F886DA3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85156353BDEBDA1D163C04C76B30E99C /* Request.swift */; };
 		FCD2C3954F55B1C7C89F4378AF7FC06C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404D69B17CE747E6C6FCCAF879AAD2DB /* CoreGraphics.framework */; };
-		FEF0D7653948988B804226129471C1EC /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353BBA433A1D828A59545FAABD3384D8 /* Stream.swift */; };
+		FEF0D7653948988B804226129471C1EC /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270D1B73A439E4338E9C7DFFABFBC3A /* Stream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,74 +83,76 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06B55216E9943B79C97573616461C4C4 /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetAuthenticationType.swift; path = Source/LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
-		0A6BBBE41123EC05B41090D9E611994A /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		0C0F57C4E227C1F4ABF4904C1331996A /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
-		0C2D2DC30C091AFFDA0EC265B1B9D59E /* Locksmith-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Locksmith-dummy.m"; sourceTree = "<group>"; };
-		0DC97664D3CBC14DEECE0BA656CE59CE /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		0E57F15C22EE65A26774A24C6DBB5059 /* SWRevealViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-umbrella.h"; sourceTree = "<group>"; };
-		10650D519CF8A7D7BBA83A565A670916 /* SWRevealViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
-		234F360C289250290211F12224EDDFBF /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		0923A4649C8FD0CC0D447C69461EAF7A /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetAuthenticationType.swift; path = Source/LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
+		097B5C340033974FB17B0FD2E91D3FA0 /* SWRevealViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWRevealViewController.modulemap; sourceTree = "<group>"; };
+		09D3BFA13E07DFD94184B78FF3640F98 /* Dictionary_Initializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary_Initializers.swift; path = Source/Dictionary_Initializers.swift; sourceTree = "<group>"; };
+		0D5A303278371068555580C8DF1D8A84 /* SWRevealViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
+		15588BFD8B1AD31CB8BC93BD8CA6B183 /* LocksmithError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithError.swift; path = Source/LocksmithError.swift; sourceTree = "<group>"; };
+		1A7C99D0836F9A85FEC301BACE77C4E1 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		21853BDC659A71D326CF128ABA599FF2 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		23713CD4DE2533AC453661C6843BB6C2 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
+		25B81EEB23D56F8E47FA1BDAF8EAAE23 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272FBCA24073E628B188F2C104830A4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2A153164C39E2CE64473561EFCCC0B57 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		2D18519304EBE28787BBA7CEC4EFE333 /* LocksmithError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithError.swift; path = Source/LocksmithError.swift; sourceTree = "<group>"; };
-		3359296F823BF0625BC798276ECA3C22 /* Locksmith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locksmith.swift; path = Source/Locksmith.swift; sourceTree = "<group>"; };
-		353BBA433A1D828A59545FAABD3384D8 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
-		391DDC63BEC355370B57748A4D7D20B9 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		399D4F0A9D64740EF7BF83AF9949473E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CD1CA8729FF1F15DD44DCD8C36BD6AD /* LocksmithAccessibleOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithAccessibleOption.swift; path = Source/LocksmithAccessibleOption.swift; sourceTree = "<group>"; };
+		2FF49ABAF5FA16C0DDD728FD0226B4F7 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		3347A7E17609365C0DABD1F9A3365AE6 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		3658415F1C2593720B7C02E36C2FBAFF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39D9068AAEC5533773D6870862C7A2EA /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		404D69B17CE747E6C6FCCAF879AAD2DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		449CEC11C1A500E4E6803D9C7F6041AD /* Locksmith-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-umbrella.h"; sourceTree = "<group>"; };
-		4746C2B89486A588C6971DB7AF98A385 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		49EEF7BDEFE80256BD5C4ECFE89D5120 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D00C9E8A5BB9AA3D4B37C45C78134C5 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		4D65FAA94FEF105CC33199511224E8E4 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		5D36FED1D5F8B3A0BB6C603D4DFAACD7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69C5B3FD48772F1B9458A4D63D7A6CF6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		741F3F1331533065A8CA50327B1488E6 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		421223DEEFA1F79838947370F1819DB5 /* Locksmith-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Locksmith-dummy.m"; sourceTree = "<group>"; };
+		503107BE3D306CD397A26EFC222DF58E /* Locksmith-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-umbrella.h"; sourceTree = "<group>"; };
+		61259C1EFA4E27D642B677B97023D5FD /* SWRevealViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWRevealViewController.xcconfig; sourceTree = "<group>"; };
+		662DF55CDCC673CC5A4E26ED26307C04 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		6AC82233B8C3D8A1B503D2E506FB8399 /* SWRevealViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-prefix.pch"; sourceTree = "<group>"; };
+		6D2029007F7854414197DB338B9455D8 /* SWRevealViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
+		724BADE49A5A4412837ABE7F070ED620 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		76EDC55C2FD2353041B335C59ED9B6D1 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		78F558CCB55C2D0055427CC76389BC1F /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		7CB1D08FE562BF934219841253D09B42 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		802272B022674B2276FD20945820B798 /* LocksmithAccessibleOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithAccessibleOption.swift; path = Source/LocksmithAccessibleOption.swift; sourceTree = "<group>"; };
-		80368CAFCB222B99C82E4738CA6C2462 /* LocksmithSecurityClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithSecurityClass.swift; path = Source/LocksmithSecurityClass.swift; sourceTree = "<group>"; };
 		8398B3D0EB66636F9DF19257E36C76C3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		85156353BDEBDA1D163C04C76B30E99C /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		8921D3AE3187261D04D6630281F60DE9 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		87FC5FB45074EA9D0B6FB65A88BDA8FD /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		8CEAFC2002CD849F51AD7E1730763275 /* Locksmith.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Locksmith.xcconfig; sourceTree = "<group>"; };
+		9041BD0B05033F2F24285265439C40C4 /* LocksmithInternetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetProtocol.swift; path = Source/LocksmithInternetProtocol.swift; sourceTree = "<group>"; };
+		9108A6A65AAEF1E5BACD8FDF1F23136C /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		9270D1B73A439E4338E9C7DFFABFBC3A /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
+		92DC3BD278F7C2A8A1E8C7B701B5514A /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		9453AA4431FC6C9BEF5D817100A429C9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		949861748B33F56A4A73471BB878AB1C /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		987F653DC5394571896C0932EBF40E70 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
-		A0075B233F5EE3384B79129D94AA0DED /* Locksmith-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-prefix.pch"; sourceTree = "<group>"; };
+		9A91A6EB9962F91A58580EDDEF4E7DCC /* LocksmithSecurityClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithSecurityClass.swift; path = Source/LocksmithSecurityClass.swift; sourceTree = "<group>"; };
+		A057CBC727A89747AF1B734FBFF343B9 /* Locksmith-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-prefix.pch"; sourceTree = "<group>"; };
 		A57E5541FFC2055B279C736A18F1B313 /* SWRevealViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWRevealViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6F8091A629DA2338B5BE25A2EE65C34 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		A886DB69F403A0C63E11BB2995ED974E /* SWRevealViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-prefix.pch"; sourceTree = "<group>"; };
-		ABC51DE5E12056F8B29F2321B94706B6 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		A87393D675EFFFB16EBB8B8C530C0C64 /* Locksmith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Locksmith.h; path = Source/Locksmith.h; sourceTree = "<group>"; };
+		A9584082D3D295110B8152397DF71614 /* SWRevealViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWRevealViewController-dummy.m"; sourceTree = "<group>"; };
 		AC6459730568B0152947A1F7D00796D5 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B43A30E91016B3B76542BC473D48B9DD /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		B88CE2B276B60E7EC47216C85DD70138 /* SWRevealViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWRevealViewController.modulemap; sourceTree = "<group>"; };
+		AD92388208BF9A971ABA8112FF57772B /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		AE76FFAA55543B2B4A43322043FE7A0B /* Locksmith.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Locksmith.xcconfig; sourceTree = "<group>"; };
+		B776EDD2572E484E3180BBA4EBD9A640 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BBF4DD3608343B8917197CB361C76F3D /* Locksmith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Locksmith.h; path = Source/Locksmith.h; sourceTree = "<group>"; };
-		BD8603C6DC632F5CB7CA2A197561BABC /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		C8D0EB58261DD582383F457C330905ED /* SWRevealViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWRevealViewController.xcconfig; sourceTree = "<group>"; };
-		C8EFD069EC6FFB76AF4C9D68BDFBAA1F /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		C9A6C5FCDF1BDDBA54BE242BBF9CD4E5 /* LocksmithInternetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetProtocol.swift; path = Source/LocksmithInternetProtocol.swift; sourceTree = "<group>"; };
-		CB545E8367CBD0F4889F2F8AD4A7D8E4 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		C09062B11EC633778F9385759E411DF9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3D428C2598FCDF017117EB06F89B531 /* Locksmith.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Locksmith.modulemap; sourceTree = "<group>"; };
 		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		CF9915D28A58585D0FDF7DB214B5F628 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFF45AB572F6B7F632BB54B7F79B2159 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D4606C563D772E2744525ACB91E9A250 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		D4ACD50683A821E495FD704856184DFF /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		D9E5909F295491306693858F43C08FEA /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
 		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		DAA883BBCD0A5BDDC68368097DDE5916 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		DE0CC1F3F0D55B2877EFA28E5AA272EB /* Locksmith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Locksmith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E319B6C8C237E8E6078B3AAA1317C648 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		DFC09D1F189F09275295AC6FD690914E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E43FE8EF30338B236070FDC8EC7F8BE5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E470D6D4287BB5A1062183FBBFDF8A0C /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBD8A9F392C04E1BCD42C10D46949032 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		EDDD23009AB942AD6B3DBF15DFD986D6 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
-		EECC32103A47AE9077BBFAC094FB9C2F /* Dictionary_Initializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary_Initializers.swift; path = Source/Dictionary_Initializers.swift; sourceTree = "<group>"; };
+		EAF7AC3FE950B29B8CEF8E88ECBA4EF0 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		EE56CD8291EEF66F16C841DC353E1DA6 /* Locksmith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locksmith.swift; path = Source/Locksmith.swift; sourceTree = "<group>"; };
+		EEB6A07D1A57A2F2423BC1456FE67A6E /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		F0324D3F73F3EB95576AE101F6F4092C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F04B56C9B3DBF0984C56BE8B5145C52C /* SWRevealViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
-		F6D852FCFA88EAA8BF31B4A41F8CEA9F /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		F6EA168D93DD72ACF731DCE8328B4DDE /* SWRevealViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWRevealViewController-dummy.m"; sourceTree = "<group>"; };
-		FF8FBA5C2EAD4F1F8AA5C6876736A4E2 /* Locksmith.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Locksmith.modulemap; sourceTree = "<group>"; };
+		FBED7734E0F7D6A37DA12C9A6A6A1F9F /* SWRevealViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		06FFFC3E881209386FCFC3C0A701F8B0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C09062B11EC633778F9385759E411DF9 /* Info.plist */,
+				949861748B33F56A4A73471BB878AB1C /* SwiftyJSON.modulemap */,
+				76EDC55C2FD2353041B335C59ED9B6D1 /* SwiftyJSON.xcconfig */,
+				39D9068AAEC5533773D6870862C7A2EA /* SwiftyJSON-dummy.m */,
+				87FC5FB45074EA9D0B6FB65A88BDA8FD /* SwiftyJSON-prefix.pch */,
+				E470D6D4287BB5A1062183FBBFDF8A0C /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,34 +235,70 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3B4E531D7A21EE25A6BBD29E9E6F162D /* Support Files */ = {
+		22C24FA2E0BA579E7371673FAAC23612 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CF9915D28A58585D0FDF7DB214B5F628 /* Info.plist */,
-				B88CE2B276B60E7EC47216C85DD70138 /* SWRevealViewController.modulemap */,
-				C8D0EB58261DD582383F457C330905ED /* SWRevealViewController.xcconfig */,
-				F6EA168D93DD72ACF731DCE8328B4DDE /* SWRevealViewController-dummy.m */,
-				A886DB69F403A0C63E11BB2995ED974E /* SWRevealViewController-prefix.pch */,
-				0E57F15C22EE65A26774A24C6DBB5059 /* SWRevealViewController-umbrella.h */,
+				DAA883BBCD0A5BDDC68368097DDE5916 /* GoogleMaps.bundle */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SWRevealViewController";
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		6B774D7A56E519AC2165685953F35BEE /* Locksmith */ = {
+		2642F6D1F33E90BBDB5037B770388FC5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EECC32103A47AE9077BBFAC094FB9C2F /* Dictionary_Initializers.swift */,
-				BBF4DD3608343B8917197CB361C76F3D /* Locksmith.h */,
-				3359296F823BF0625BC798276ECA3C22 /* Locksmith.swift */,
-				802272B022674B2276FD20945820B798 /* LocksmithAccessibleOption.swift */,
-				2D18519304EBE28787BBA7CEC4EFE333 /* LocksmithError.swift */,
-				06B55216E9943B79C97573616461C4C4 /* LocksmithInternetAuthenticationType.swift */,
-				C9A6C5FCDF1BDDBA54BE242BBF9CD4E5 /* LocksmithInternetProtocol.swift */,
-				80368CAFCB222B99C82E4738CA6C2462 /* LocksmithSecurityClass.swift */,
-				C32841C9C9F5922E22C967689D86F8F3 /* Support Files */,
+				3658415F1C2593720B7C02E36C2FBAFF /* Info.plist */,
+				C3D428C2598FCDF017117EB06F89B531 /* Locksmith.modulemap */,
+				AE76FFAA55543B2B4A43322043FE7A0B /* Locksmith.xcconfig */,
+				421223DEEFA1F79838947370F1819DB5 /* Locksmith-dummy.m */,
+				A057CBC727A89747AF1B734FBFF343B9 /* Locksmith-prefix.pch */,
+				503107BE3D306CD397A26EFC222DF58E /* Locksmith-umbrella.h */,
 			);
-			path = Locksmith;
+			name = "Support Files";
+			path = "../Target Support Files/Locksmith";
+			sourceTree = "<group>";
+		};
+		32C3FC2A12F628CE45DA7EB77D16F9D7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FF49ABAF5FA16C0DDD728FD0226B4F7 /* Alamofire.modulemap */,
+				21853BDC659A71D326CF128ABA599FF2 /* Alamofire.xcconfig */,
+				2A153164C39E2CE64473561EFCCC0B57 /* Alamofire-dummy.m */,
+				78F558CCB55C2D0055427CC76389BC1F /* Alamofire-prefix.pch */,
+				EEB6A07D1A57A2F2423BC1456FE67A6E /* Alamofire-umbrella.h */,
+				DFC09D1F189F09275295AC6FD690914E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		38A101A1AD208772CADC94AE99C47F52 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0D5A303278371068555580C8DF1D8A84 /* SWRevealViewController.h */,
+				6D2029007F7854414197DB338B9455D8 /* SWRevealViewController.m */,
+				8FC6727C53D85904221B0F811A4E65AA /* Support Files */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		3DA2BECA07D5A5B6B8A91078229DF6B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAF7AC3FE950B29B8CEF8E88ECBA4EF0 /* GoogleMaps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D6D34F998F65336EE0383B3673A9798 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4E24DB16422D6010C458D3D8001C733 /* Alamofire */,
+				8AB9B6BAC9BEC38D57090A23F3E090A2 /* GoogleMaps */,
+				83966E7C175DC27610632977C65CA3CF /* Locksmith */,
+				846745E3B696644FF3B5F3FC3C16ECAD /* SwiftyJSON */,
+				38A101A1AD208772CADC94AE99C47F52 /* SWRevealViewController */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
@@ -272,34 +324,58 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				F28F43F8D5ABFED45A3C598BB97433DF /* Pods */,
+				6D6D34F998F65336EE0383B3673A9798 /* Pods */,
 				012DEFD826C9C9757B8955C7F672F5E3 /* Products */,
 				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A31ACE7EDC28B23812C3222493FB3EB5 /* Support Files */ = {
+		83966E7C175DC27610632977C65CA3CF /* Locksmith */ = {
 			isa = PBXGroup;
 			children = (
-				49EEF7BDEFE80256BD5C4ECFE89D5120 /* Info.plist */,
-				EBD8A9F392C04E1BCD42C10D46949032 /* SwiftyJSON.modulemap */,
-				B43A30E91016B3B76542BC473D48B9DD /* SwiftyJSON.xcconfig */,
-				BD8603C6DC632F5CB7CA2A197561BABC /* SwiftyJSON-dummy.m */,
-				8921D3AE3187261D04D6630281F60DE9 /* SwiftyJSON-prefix.pch */,
-				CB545E8367CBD0F4889F2F8AD4A7D8E4 /* SwiftyJSON-umbrella.h */,
+				09D3BFA13E07DFD94184B78FF3640F98 /* Dictionary_Initializers.swift */,
+				A87393D675EFFFB16EBB8B8C530C0C64 /* Locksmith.h */,
+				EE56CD8291EEF66F16C841DC353E1DA6 /* Locksmith.swift */,
+				2CD1CA8729FF1F15DD44DCD8C36BD6AD /* LocksmithAccessibleOption.swift */,
+				15588BFD8B1AD31CB8BC93BD8CA6B183 /* LocksmithError.swift */,
+				0923A4649C8FD0CC0D447C69461EAF7A /* LocksmithInternetAuthenticationType.swift */,
+				9041BD0B05033F2F24285265439C40C4 /* LocksmithInternetProtocol.swift */,
+				9A91A6EB9962F91A58580EDDEF4E7DCC /* LocksmithSecurityClass.swift */,
+				2642F6D1F33E90BBDB5037B770388FC5 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
+			path = Locksmith;
 			sourceTree = "<group>";
 		};
-		A8FC5696AE4A306A95EC330E1A6064BC /* SWRevealViewController */ = {
+		846745E3B696644FF3B5F3FC3C16ECAD /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				10650D519CF8A7D7BBA83A565A670916 /* SWRevealViewController.h */,
-				F04B56C9B3DBF0984C56BE8B5145C52C /* SWRevealViewController.m */,
-				3B4E531D7A21EE25A6BBD29E9E6F162D /* Support Files */,
+				9453AA4431FC6C9BEF5D817100A429C9 /* SwiftyJSON.swift */,
+				06FFFC3E881209386FCFC3C0A701F8B0 /* Support Files */,
 			);
-			path = SWRevealViewController;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		8AB9B6BAC9BEC38D57090A23F3E090A2 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				3DA2BECA07D5A5B6B8A91078229DF6B9 /* Frameworks */,
+				22C24FA2E0BA579E7371673FAAC23612 /* Resources */,
+			);
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		8FC6727C53D85904221B0F811A4E65AA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				25B81EEB23D56F8E47FA1BDAF8EAAE23 /* Info.plist */,
+				097B5C340033974FB17B0FD2E91D3FA0 /* SWRevealViewController.modulemap */,
+				61259C1EFA4E27D642B677B97023D5FD /* SWRevealViewController.xcconfig */,
+				A9584082D3D295110B8152397DF71614 /* SWRevealViewController-dummy.m */,
+				6AC82233B8C3D8A1B503D2E506FB8399 /* SWRevealViewController-prefix.pch */,
+				FBED7734E0F7D6A37DA12C9A6A6A1F9F /* SWRevealViewController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SWRevealViewController";
 			sourceTree = "<group>";
 		};
 		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
@@ -308,20 +384,6 @@
 				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		C32841C9C9F5922E22C967689D86F8F3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				399D4F0A9D64740EF7BF83AF9949473E /* Info.plist */,
-				FF8FBA5C2EAD4F1F8AA5C6876736A4E2 /* Locksmith.modulemap */,
-				8CEAFC2002CD849F51AD7E1730763275 /* Locksmith.xcconfig */,
-				0C2D2DC30C091AFFDA0EC265B1B9D59E /* Locksmith-dummy.m */,
-				A0075B233F5EE3384B79129D94AA0DED /* Locksmith-prefix.pch */,
-				449CEC11C1A500E4E6803D9C7F6041AD /* Locksmith-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Locksmith";
 			sourceTree = "<group>";
 		};
 		C7D0C5845324929F38DBF3F26F5ED0B5 /* iOS */ = {
@@ -334,60 +396,26 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C8CC6E4950B345AF5D9BD4EB0E70AC6A /* SwiftyJSON */ = {
+		D4E24DB16422D6010C458D3D8001C733 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				69C5B3FD48772F1B9458A4D63D7A6CF6 /* SwiftyJSON.swift */,
-				A31ACE7EDC28B23812C3222493FB3EB5 /* Support Files */,
-			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
-		D3B2CC619DA890B4D3B9DDD129A9A500 /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				234F360C289250290211F12224EDDFBF /* Alamofire.swift */,
-				D4606C563D772E2744525ACB91E9A250 /* Download.swift */,
-				EDDD23009AB942AD6B3DBF15DFD986D6 /* Error.swift */,
-				0C0F57C4E227C1F4ABF4904C1331996A /* Manager.swift */,
-				4746C2B89486A588C6971DB7AF98A385 /* MultipartFormData.swift */,
-				741F3F1331533065A8CA50327B1488E6 /* ParameterEncoding.swift */,
-				F6D852FCFA88EAA8BF31B4A41F8CEA9F /* Request.swift */,
-				0A6BBBE41123EC05B41090D9E611994A /* Response.swift */,
-				4D00C9E8A5BB9AA3D4B37C45C78134C5 /* ResponseSerialization.swift */,
-				A6F8091A629DA2338B5BE25A2EE65C34 /* Result.swift */,
-				7CB1D08FE562BF934219841253D09B42 /* ServerTrustPolicy.swift */,
-				353BBA433A1D828A59545FAABD3384D8 /* Stream.swift */,
-				987F653DC5394571896C0932EBF40E70 /* Upload.swift */,
-				E319B6C8C237E8E6078B3AAA1317C648 /* Validation.swift */,
-				F54DBC1DA8BC2C30F0E9AB1A7D541AD2 /* Support Files */,
+				3347A7E17609365C0DABD1F9A3365AE6 /* Alamofire.swift */,
+				1A7C99D0836F9A85FEC301BACE77C4E1 /* Download.swift */,
+				23713CD4DE2533AC453661C6843BB6C2 /* Error.swift */,
+				724BADE49A5A4412837ABE7F070ED620 /* Manager.swift */,
+				CFF45AB572F6B7F632BB54B7F79B2159 /* MultipartFormData.swift */,
+				662DF55CDCC673CC5A4E26ED26307C04 /* ParameterEncoding.swift */,
+				85156353BDEBDA1D163C04C76B30E99C /* Request.swift */,
+				AD92388208BF9A971ABA8112FF57772B /* Response.swift */,
+				B776EDD2572E484E3180BBA4EBD9A640 /* ResponseSerialization.swift */,
+				92DC3BD278F7C2A8A1E8C7B701B5514A /* Result.swift */,
+				D4ACD50683A821E495FD704856184DFF /* ServerTrustPolicy.swift */,
+				9270D1B73A439E4338E9C7DFFABFBC3A /* Stream.swift */,
+				D9E5909F295491306693858F43C08FEA /* Upload.swift */,
+				9108A6A65AAEF1E5BACD8FDF1F23136C /* Validation.swift */,
+				32C3FC2A12F628CE45DA7EB77D16F9D7 /* Support Files */,
 			);
 			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		F28F43F8D5ABFED45A3C598BB97433DF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D3B2CC619DA890B4D3B9DDD129A9A500 /* Alamofire */,
-				6B774D7A56E519AC2165685953F35BEE /* Locksmith */,
-				C8CC6E4950B345AF5D9BD4EB0E70AC6A /* SwiftyJSON */,
-				A8FC5696AE4A306A95EC330E1A6064BC /* SWRevealViewController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F54DBC1DA8BC2C30F0E9AB1A7D541AD2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				ABC51DE5E12056F8B29F2321B94706B6 /* Alamofire.modulemap */,
-				4D65FAA94FEF105CC33199511224E8E4 /* Alamofire.xcconfig */,
-				C8EFD069EC6FFB76AF4C9D68BDFBAA1F /* Alamofire-dummy.m */,
-				0DC97664D3CBC14DEECE0BA656CE59CE /* Alamofire-prefix.pch */,
-				391DDC63BEC355370B57748A4D7D20B9 /* Alamofire-umbrella.h */,
-				5D36FED1D5F8B3A0BB6C603D4DFAACD7 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -653,7 +681,7 @@
 /* Begin XCBuildConfiguration section */
 		15A0C02EAB863DC41FBDCEEAF7CD4B24 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B43A30E91016B3B76542BC473D48B9DD /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 76EDC55C2FD2353041B335C59ED9B6D1 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -680,7 +708,7 @@
 		};
 		1E756CC73443F5A828193B0B87C70CF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B43A30E91016B3B76542BC473D48B9DD /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 76EDC55C2FD2353041B335C59ED9B6D1 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -708,7 +736,7 @@
 		};
 		558382472231A57681D511B715653631 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8D0EB58261DD582383F457C330905ED /* SWRevealViewController.xcconfig */;
+			baseConfigurationReference = 61259C1EFA4E27D642B677B97023D5FD /* SWRevealViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -735,7 +763,7 @@
 		};
 		5C50ED38E4F95B15A46E75AA2B845366 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CEAFC2002CD849F51AD7E1730763275 /* Locksmith.xcconfig */;
+			baseConfigurationReference = AE76FFAA55543B2B4A43322043FE7A0B /* Locksmith.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -793,7 +821,7 @@
 		};
 		8D8066141B18E38C16EA0F29BE66A045 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CEAFC2002CD849F51AD7E1730763275 /* Locksmith.xcconfig */;
+			baseConfigurationReference = AE76FFAA55543B2B4A43322043FE7A0B /* Locksmith.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -820,7 +848,7 @@
 		};
 		A3427C918F24207B5FD3A44958345D7E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D65FAA94FEF105CC33199511224E8E4 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 21853BDC659A71D326CF128ABA599FF2 /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -886,7 +914,7 @@
 		};
 		C993D8405F342C8E23BAD4EDF32D79E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D65FAA94FEF105CC33199511224E8E4 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 21853BDC659A71D326CF128ABA599FF2 /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -945,7 +973,7 @@
 		};
 		E7E963697404306A473D472627977B00 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8D0EB58261DD582383F457C330905ED /* SWRevealViewController.xcconfig */;
+			baseConfigurationReference = 61259C1EFA4E27D642B677B97023D5FD /* SWRevealViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

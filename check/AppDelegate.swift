@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
       self.prepareNavigationBarAppearance()
-      
+      GMSServices.provideAPIKey("AIzaSyDWwPs79-kZZpeIRMobbu62nlq-E_x_-LQ")
       return true
       
     }
