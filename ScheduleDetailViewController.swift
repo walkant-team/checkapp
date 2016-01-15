@@ -12,62 +12,68 @@ import Alamofire
 
 class ScheduleDetailViewController: UIViewController, UIDocumentInteractionControllerDelegate {
 
-    @IBOutlet var titleLabel:UILabel!
-    @IBOutlet var scheduleLabel:UILabel!
-    @IBOutlet var addressLabel:UILabel!
-    @IBOutlet var descriptionText:UITextView!
-    @IBOutlet weak var checkinButton: UIButton!
-    @IBOutlet weak var fileButton: UIButton!
-    @IBOutlet weak var mapView: GMSMapView!
+  @IBOutlet var titleLabel:UILabel!
+  @IBOutlet var scheduleLabel:UILabel!
+  @IBOutlet var addressLabel:UILabel!
+  @IBOutlet var descriptionText:UITextView!
+  @IBOutlet weak var checkinButton: UIButton!
+  @IBOutlet weak var fileButton: UIButton!
+  @IBOutlet weak var mapView: GMSMapView!
+  @IBOutlet weak var containerView: UIView!
   
-    let checkinButtonTag = 0
-    let checkoutButtonTag = 1
-    
-    let documentInteractionController = UIDocumentInteractionController()
-    var finalPath: NSURL?
+  let checkinButtonTag = 0
+  let checkoutButtonTag = 1
   
-    let api = CheckAPI()
-    var schedule : Schedule!
-    var checkin : Checkin?
-  
-    override func viewDidLoad() {            
-      descriptionText.text = schedule.event.description
-      scheduleLabel.text = schedule.date_time
-      titleLabel.text = schedule.event.name
-      addressLabel.text = schedule.event.address
-    
-      // Set the title of the navigation bar
-      title = schedule.event.name
-      
-      if (self.schedule.checkin == nil) {
-        self.checkinButton.setTitle("Checkin", forState: UIControlState.Normal)
-        self.checkinButton.tag = self.checkinButtonTag
-      } else if (self.schedule.checkin?.check_out == false) {
-        self.checkinButton.setTitle("Checkout", forState: UIControlState.Normal)
-        self.checkinButton.tag = self.checkoutButtonTag
-      }else {
-        self.checkinButton.hidden = true
-      }
-        
-      if (self.schedule.event.file == nil) {
-        fileButton.hidden = true
-      }
-        
+  let documentInteractionController = UIDocumentInteractionController()
+  var finalPath: NSURL?
 
-      super.viewDidLoad()
-        
-        let latitude = schedule.event.latitude
-        let longitude = schedule.event.longitude
-        
-        let camera = GMSCameraPosition.cameraWithLatitude(latitude, longitude: longitude, zoom: 14)
-        self.mapView.camera = camera
-        
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2DMake(latitude, longitude)
-        marker.title = schedule.event.name
-        marker.snippet = schedule.event.description
-        marker.map = mapView
+  let api = CheckAPI()
+  var schedule : Schedule!
+  var checkin : Checkin?
+  
+  override func viewDidLoad() {
+    descriptionText.text = schedule.event.description
+    scheduleLabel.text = schedule.date_time
+    titleLabel.text = schedule.event.name
+    addressLabel.text = schedule.event.address
+    
+    self.containerView.layer.borderWidth = 1
+    self.containerView.layer.borderColor = UIColor(red:222/255.0, green:225/255.0, blue:227/255.0, alpha: 1.0).CGColor
+    self.containerView.layer.cornerRadius = 5.0
+    self.containerView.clipsToBounds = true
+  
+    // Set the title of the navigation bar
+    title = schedule.event.name
+    
+    if (self.schedule.checkin == nil) {
+      self.checkinButton.setTitle("Checkin", forState: UIControlState.Normal)
+      self.checkinButton.tag = self.checkinButtonTag
+    } else if (self.schedule.checkin?.check_out == false) {
+      self.checkinButton.setTitle("Checkout", forState: UIControlState.Normal)
+      self.checkinButton.tag = self.checkoutButtonTag
+    }else {
+      self.checkinButton.hidden = true
     }
+      
+    if (self.schedule.event.file == nil) {
+      fileButton.hidden = true
+    }
+      
+
+    super.viewDidLoad()
+      
+      let latitude = schedule.event.latitude
+      let longitude = schedule.event.longitude
+      
+      let camera = GMSCameraPosition.cameraWithLatitude(latitude, longitude: longitude, zoom: 14)
+      self.mapView.camera = camera
+      
+      let marker = GMSMarker()
+      marker.position = CLLocationCoordinate2DMake(latitude, longitude)
+      marker.title = schedule.event.name
+      marker.snippet = schedule.event.description
+      marker.map = mapView
+  }
   
   func didLoadCheckin(checkin: Checkin?){
     self.schedule.checkin = checkin

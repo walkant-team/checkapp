@@ -41,7 +41,6 @@ class CheckinTableViewController: UITableViewController {
     }
   
   func didLoadCheckins(checkins: [Checkin]){
-    print("didLoadSchedules table")
     self.checkins = checkins
     self.tableView?.reloadData()
   }

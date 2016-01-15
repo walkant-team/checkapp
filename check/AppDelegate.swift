@@ -14,12 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
       self.prepareNavigationBarAppearance()
       GMSServices.provideAPIKey("AIzaSyDWwPs79-kZZpeIRMobbu62nlq-E_x_-LQ")
-      return true
-      
+      return true      
     }
   
   func prepareNavigationBarAppearance() {
@@ -30,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UINavigationBar.appearance().tintColor = UIColor.whiteColor()
     UINavigationBar.appearance().translucent = false
     
-    let font = UIFont(name: "Avenir", size: 20)!
+    let font = UIFont(name: "Avenir", size: 16)!
     let regularVertical = UITraitCollection(verticalSizeClass:.Regular)
     let titleDict : Dictionary = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: font]
     

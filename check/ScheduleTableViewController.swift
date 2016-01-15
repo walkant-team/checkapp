@@ -20,8 +20,6 @@ class ScheduleTableViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    print("viewDidLoad table")
     // Remove the title of the back button
     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
   
@@ -40,14 +38,12 @@ class ScheduleTableViewController: UITableViewController {
     }
     print("viewDidLoad table")
     schedules = [Schedule]()
-    api.loadSchedules(didLoadSchedules)
   }
   
   override func viewDidAppear(animated: Bool) {
-    print("viewDidAppear table")
     super.viewDidAppear(false)
     self.showLoginView()
-//    self.tableView?.reloadData()
+    print("viewDidAppear table")
   }
   
   override func didReceiveMemoryWarning() {
@@ -64,6 +60,9 @@ class ScheduleTableViewController: UITableViewController {
   func showLoginView() {
     if !api.hasOAuthToken() {
       self.performSegueWithIdentifier("loginView", sender: self)
+    }else{
+      api.loadSchedules(didLoadSchedules)
+      self.tableView?.reloadData()
     }
   }
   
