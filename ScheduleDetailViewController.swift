@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import GoogleMaps
 
 class ScheduleDetailViewController: UIViewController, UIDocumentInteractionControllerDelegate {
 
@@ -17,6 +18,7 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
     @IBOutlet var descriptionText:UITextView!
     @IBOutlet weak var checkinButton: UIButton!
     @IBOutlet weak var fileButton: UIButton!
+    @IBOutlet weak var mapView: GMSMapView!
   
     let checkinButtonTag = 0
     let checkoutButtonTag = 1
@@ -53,6 +55,18 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
         
       print("viewDidLoad cell")
       super.viewDidLoad()
+        
+        let latitude = schedule.event.latitude
+        let longitude = schedule.event.longitude
+        
+        let camera = GMSCameraPosition.cameraWithLatitude(latitude, longitude: longitude, zoom: 14)
+        self.mapView.camera = camera
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2DMake(latitude, longitude)
+        marker.title = schedule.event.name
+        marker.snippet = schedule.event.description
+        marker.map = mapView
     }
   
   func didLoadCheckin(checkin: Checkin?){

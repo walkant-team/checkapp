@@ -314,16 +314,18 @@
                                     <action selector="checkinAction:" destination="faN-6i-J55" eventType="touchUpInside" id="gFi-vm-6OB"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzF-vr-ZGx">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzF-vr-ZGx" customClass="GMSMapView">
                                 <rect key="frame" x="14" y="208" width="392" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jzF-vr-ZGx" secondAttribute="trailing" id="4Rl-54-luH"/>
                             <constraint firstAttribute="trailing" secondItem="iV4-lF-706" secondAttribute="trailing" id="LHu-Qv-YwW"/>
                             <constraint firstItem="iV4-lF-706" firstAttribute="leading" secondItem="j0a-bv-xKz" secondAttribute="leading" id="TFA-4l-VRh"/>
                             <constraint firstAttribute="trailing" secondItem="2aP-JP-tAj" secondAttribute="trailing" constant="8" id="YAo-cF-wKx"/>
+                            <constraint firstItem="jzF-vr-ZGx" firstAttribute="leading" secondItem="j0a-bv-xKz" secondAttribute="leading" id="ZLP-JO-f1K"/>
                             <constraint firstItem="Xta-ZB-9ew" firstAttribute="top" secondItem="iV4-lF-706" secondAttribute="bottom" id="ZXw-IM-vMg"/>
                             <constraint firstItem="2aP-JP-tAj" firstAttribute="top" secondItem="Wrr-Mg-XHd" secondAttribute="bottom" constant="8" id="cdh-Kj-rAE"/>
                             <constraint firstItem="2aP-JP-tAj" firstAttribute="leading" secondItem="j0a-bv-xKz" secondAttribute="leading" constant="8" id="j8v-V8-Ocg"/>
@@ -337,6 +339,7 @@
                         <outlet property="checkinButton" destination="iV4-lF-706" id="BOa-C4-AMD"/>
                         <outlet property="descriptionText" destination="xHc-AY-m5V" id="Wpy-GQ-kKC"/>
                         <outlet property="fileButton" destination="bHl-qT-5no" id="jbI-G9-exA"/>
+                        <outlet property="mapView" destination="jzF-vr-ZGx" id="PgY-CK-23z"/>
                         <outlet property="scheduleLabel" destination="cCT-GI-fnn" id="eTx-KE-vVi"/>
                         <outlet property="titleLabel" destination="41t-ui-F6D" id="1vK-Vb-AoQ"/>
                     </connections>
