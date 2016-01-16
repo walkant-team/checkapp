@@ -394,7 +394,7 @@
                                 <rect key="frame" x="34" y="20" width="30" height="30"/>
                                 <state key="normal" title="X"/>
                                 <connections>
-                                    <segue destination="v6j-U8-T4g" kind="unwind" unwindAction="unwindSegue:" id="113-8r-3ia"/>
+                                    <action selector="closeModal:" destination="0Jh-au-sSa" eventType="touchUpInside" id="AsU-Aw-4rE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-Kw-neH">
@@ -412,7 +412,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dp-Wf-dAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="v6j-U8-T4g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1755" y="1269"/>
         </scene>
