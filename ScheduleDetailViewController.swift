@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 import Alamofire
 
-class ScheduleDetailViewController: UIViewController, UIDocumentInteractionControllerDelegate {
+class ScheduleDetailViewController: UIViewController, UIDocumentInteractionControllerDelegate, GMSMapViewDelegate {
 
     @IBOutlet var titleLabel:UILabel!
     @IBOutlet var scheduleLabel:UILabel!
@@ -61,6 +61,7 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
         
         let camera = GMSCameraPosition.cameraWithLatitude(latitude, longitude: longitude, zoom: 14)
         self.mapView.camera = camera
+        self.mapView.delegate = self
         
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(latitude, longitude)
@@ -158,6 +159,13 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
             let destinationController = segue.destinationViewController as! MapViewController
             destinationController.event = schedule.event
         }
+    }
+    
+    
+    // GMSMapView delegate
+    func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
+        print("entro")
+        self.performSegueWithIdentifier("showMap", sender: self)
     }
 
 }
