@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821448221C4B08B100E19A72 /* sharedCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821448211C4B08B100E19A72 /* sharedCode.swift */; };
 		8276ABBB1C48F95B0048EAD9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276ABBA1C48F95B0048EAD9 /* MapViewController.swift */; };
 		AF03AE421C47FAAB00E64561 /* CheckinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03AE411C47FAAB00E64561 /* CheckinTableViewController.swift */; };
 		AF03AE4B1C47FE8E00E64561 /* CheckinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03AE4A1C47FE8E00E64561 /* CheckinTableViewCell.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		1328A1B7982A479EA0BCBF02 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		821448211C4B08B100E19A72 /* sharedCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sharedCode.swift; sourceTree = "<group>"; };
 		8276ABBA1C48F95B0048EAD9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AF03AE411C47FAAB00E64561 /* CheckinTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinTableViewController.swift; sourceTree = "<group>"; };
 		AF03AE4A1C47FE8E00E64561 /* CheckinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinTableViewCell.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				AF5CF6181C39FE9600FF190A /* Schedule.swift */,
 				AF1632BE1C3ED6BC00A3C60B /* Checkin.swift */,
 				AF5CF6211C39FF7400FF190A /* User.swift */,
+				821448211C4B08B100E19A72 /* sharedCode.swift */,
 			);
 			name = checkAPI;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				AF03AE421C47FAAB00E64561 /* CheckinTableViewController.swift in Sources */,
 				AF03AE4B1C47FE8E00E64561 /* CheckinTableViewCell.swift in Sources */,
 				AF8A6B3E1C30D14F002347D2 /* Event.swift in Sources */,
+				821448221C4B08B100E19A72 /* sharedCode.swift in Sources */,
 				8276ABBB1C48F95B0048EAD9 /* MapViewController.swift in Sources */,
 				AF1632BF1C3ED6BC00A3C60B /* Checkin.swift in Sources */,
 			);
