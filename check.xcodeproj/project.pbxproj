@@ -586,7 +586,7 @@
 				);
 				INFOPLIST_FILE = check/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = angelsystem.check;
+				PRODUCT_BUNDLE_IDENTIFIER = walkant.check;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "check/check-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -607,7 +607,7 @@
 				);
 				INFOPLIST_FILE = check/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = angelsystem.check;
+				PRODUCT_BUNDLE_IDENTIFIER = walkant.check;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "check/check-Bridging-Header.h";
 			};
