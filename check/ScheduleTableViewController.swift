@@ -60,18 +60,30 @@ class ScheduleTableViewController: UITableViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+  
+  func checkinSchedules(){
+    var new_schedules = [Schedule]()
+    for schedule in self.schedules {
+      api.checkVerified(schedule.id, completion: { (checkin) -> Void in
+        schedule.checkin = checkin
+      })
+      new_schedules.append(schedule)
+    }
+    self.schedules.removeAll()
+    self.schedules = new_schedules
+  }
 
   func didLoadSchedules(schedules: [Schedule]){
 //    var new_schedules = [Schedule]()
-//    print("didLoadSchedules table")
-//    for schedule in schedules {
+//    for schedule in self.schedules {
 //      
-//      api.checkVerified(schedule.id) { (checkin) -> Void in
+//      api.checkVerified(schedule.id, completion: { (checkin) -> Void in
 //        
 //        schedule.checkin = checkin
-//      }
+//      })
 //      new_schedules.append(schedule)
-//    }        
+//      
+//    }
     self.schedules = schedules
     self.tableView.reloadData()
   }
@@ -127,7 +139,7 @@ class ScheduleTableViewController: UITableViewController {
       let cell = tableView.dequeueReusableCellWithIdentifier("scheduleCell", forIndexPath: indexPath) as! ScheduleTableViewCell
 
       // Configure the cell...
-      let schedule = schedules[indexPath.row]    
+      let schedule = schedules[indexPath.row]
       cell.selectionStyle = UITableViewCellSelectionStyle.None
       cell.scheduleLabel?.text = schedule.date_time
       cell.addressLabel?.text = schedule.event.address

@@ -89,8 +89,7 @@ class CheckAPI {
       Alamofire.request(.GET, urlString, headers: headers).responseJSON { response in
         if let JSON = response.result.value {
           if (response.response?.statusCode == 200) {
-            let checkin = Checkin(data: JSON as! NSDictionary)
-            
+            let checkin = Checkin(data: JSON as! NSDictionary)            
             completion(checkin: checkin)            
           }
         }
@@ -130,15 +129,6 @@ class CheckAPI {
     }
   }
   
-//  func next(completion: (stories:[Story]) ->()) {
-//    if isLoading {
-//      return
-//    }
-//    
-//    ++page
-//    loadSchedules(page: page, completion: completion)
-//  }
-  
   func loadSchedules(var urlString: String?, completion: (([Schedule]) -> Void)!) {
     if urlString == nil{
       urlString = "\(base_url)/schedules/"
@@ -156,9 +146,9 @@ class CheckAPI {
           self.jsonArray = JSON["results"] as? NSMutableArray                              
           for item in self.jsonArray! {
             let schedule = Schedule(data: item as! NSDictionary)
-            self.checkVerified(schedule.id) { (checkin) -> Void in
-              schedule.checkin = checkin
-            }
+//            self.checkVerified(schedule.id) { (checkin) -> Void in
+//              schedule.checkin = checkin
+//            }
             schedules.append(schedule)
           }
           let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
