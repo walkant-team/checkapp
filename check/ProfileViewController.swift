@@ -27,9 +27,9 @@ class ProfileViewController: UIViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
       api.loadProfile { (user) -> Void in
-        self.fullnameLabel.text = user?.full_name
-        self.emailLabel.text = user?.email
-        self.addressLabel.text = user?.address
+        self.addressLabel?.text = user!.address
+        self.fullnameLabel?.text = user!.full_name
+        self.emailLabel?.text = user!.email
       }
     }
 

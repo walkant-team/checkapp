@@ -26,7 +26,7 @@ class CheckinTableViewController: UITableViewController {
       }
       
       checkins = [Checkin]()
-      api.loadCheckins(didLoadCheckins)
+      api.loadCheckins(nil, completion: didLoadCheckins)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,6 +43,13 @@ class CheckinTableViewController: UITableViewController {
   func didLoadCheckins(checkins: [Checkin]){
     self.checkins = checkins
     self.tableView?.reloadData()
+  }
+  
+  func loadMoreCheckins() {
+    api.loadCheckins(api.next_checkins) { (checkins: [Checkin]) -> Void in
+      self.checkins! += checkins
+      self.tableView?.reloadData()
+    }
   }
   
   func showLoginView() {
@@ -119,5 +126,10 @@ class CheckinTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+  
+  override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    if indexPath.row == (self.checkins.count - 1) && (self.checkins.count < api.total_checkins){
+      self.loadMoreCheckins()
+    }
+  }
 }

@@ -37,13 +37,24 @@ class ScheduleTableViewController: UITableViewController {
       self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     print("viewDidLoad table")
-    schedules = [Schedule]()
+//    schedules = [Schedule]()
+//    api.loadSchedules(self.didLoadSchedules)
+//    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//      self.api.loadSchedules(self.didLoadSchedules)
+//    })
   }
   
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(false)
-    self.showLoginView()
-    print("viewDidAppear table")
+  override func viewWillAppear(animated: Bool) {
+    schedules = [Schedule]()
+    self.schedules.removeAll()
+    api.loadSchedules(nil, completion: self.didLoadSchedules)
+    print("viewWillAppear table")
+//    super.viewDidAppear(animated)
+//    print("viewDidLoad table")
+//    schedules = [Schedule]()
+////    super.viewDidAppear(false)
+//    self.showLoginView()
+////    print("viewDidAppear table")
   }
   
   override func didReceiveMemoryWarning() {
@@ -52,16 +63,32 @@ class ScheduleTableViewController: UITableViewController {
   }
 
   func didLoadSchedules(schedules: [Schedule]){
-    print("didLoadSchedules table")
+//    var new_schedules = [Schedule]()
+//    print("didLoadSchedules table")
+//    for schedule in schedules {
+//      
+//      api.checkVerified(schedule.id) { (checkin) -> Void in
+//        
+//        schedule.checkin = checkin
+//      }
+//      new_schedules.append(schedule)
+//    }        
     self.schedules = schedules
-    self.tableView?.reloadData()
+    self.tableView.reloadData()
+  }
+  
+  func loadMoreSchedules() {
+    api.loadSchedules(api.next_schedules) { (schedules: [Schedule]) -> Void in
+      self.schedules! += schedules
+      self.tableView?.reloadData()
+    }
   }
 
   func showLoginView() {
     if !api.hasOAuthToken() {
       self.performSegueWithIdentifier("loginView", sender: self)
     }else{
-      api.loadSchedules(didLoadSchedules)
+      api.loadSchedules(nil, completion: didLoadSchedules)
       self.tableView?.reloadData()
     }
   }
@@ -84,7 +111,6 @@ class ScheduleTableViewController: UITableViewController {
     isAuthenticated = true
     view.alpha = 1.0
   }
-  
 
   // MARK: - Table view data source
 
@@ -96,7 +122,6 @@ class ScheduleTableViewController: UITableViewController {
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       // #warning Incomplete implementation, return the number of rows
       return self.schedules?.count ?? 0
-
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -108,6 +133,9 @@ class ScheduleTableViewController: UITableViewController {
       cell.scheduleLabel?.text = schedule.date_time
       cell.addressLabel?.text = schedule.event.address
       cell.titleLabel?.text = schedule.event.name
+      if schedule.checkin != nil {
+        cell.checkImageView?.image = UIImage(named: "check.png")
+      }
       return cell
   }
 
@@ -158,6 +186,12 @@ class ScheduleTableViewController: UITableViewController {
               destinationController.schedule = schedules[indexPath.row]
           }
       }
+  }
+  
+  override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    if indexPath.row == (self.schedules.count - 1) && (self.schedules.count < api.total_schedules){
+      self.loadMoreSchedules()
+    }
   }
 
 }

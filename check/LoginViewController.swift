@@ -18,6 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         
       super.viewDidLoad()
+        
       emailLabel.attributedPlaceholder = NSAttributedString(string:"Usuario",
       attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
       passwordLabel.attributedPlaceholder = NSAttributedString(string:"Password",
@@ -32,9 +33,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
   
   // hidden keyboard
   func textFieldShouldReturn(textField: UITextField) -> Bool {
-    passwordLabel.resignFirstResponder()
+    textField.resignFirstResponder()
     return true
   }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
   
   
     @IBAction func signinBtnTapped(sender: AnyObject) {

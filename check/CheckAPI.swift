@@ -14,6 +14,10 @@ class CheckAPI {
     
   let base_url = "http://checkin.kodevianapps.com:80/api/v1"
   var jsonArray:NSMutableArray?
+  var next_schedules: String?
+  var total_schedules: Int!
+  var next_checkins: String?
+  var total_checkins: Int!
   
   var OAuthToken: String? {
     set {
@@ -86,6 +90,7 @@ class CheckAPI {
         if let JSON = response.result.value {
           if (response.response?.statusCode == 200) {
             let checkin = Checkin(data: JSON as! NSDictionary)
+            
             completion(checkin: checkin)            
           }
         }
@@ -125,16 +130,30 @@ class CheckAPI {
     }
   }
   
-  func loadSchedules(completion: (([Schedule]) -> Void)!) {
-    let urlString = "\(base_url)/schedules/"
+//  func next(completion: (stories:[Story]) ->()) {
+//    if isLoading {
+//      return
+//    }
+//    
+//    ++page
+//    loadSchedules(page: page, completion: completion)
+//  }
+  
+  func loadSchedules(var urlString: String?, completion: (([Schedule]) -> Void)!) {
+    if urlString == nil{
+      urlString = "\(base_url)/schedules/"
+    }
+    
     if let token = self.OAuthToken {
       let headers = [
         "Authorization": "token \(token)"
       ]
       var schedules = [Schedule]()
-      Alamofire.request(.GET, urlString, headers: headers).responseJSON { response in
+      Alamofire.request(.GET, urlString!, headers: headers).responseJSON { response in
         if let JSON = response.result.value {
-          self.jsonArray = JSON["results"] as? NSMutableArray
+          self.next_schedules = JSON["next"] as? String
+          self.total_schedules = JSON["count"] as! Int
+          self.jsonArray = JSON["results"] as? NSMutableArray                              
           for item in self.jsonArray! {
             let schedule = Schedule(data: item as! NSDictionary)
             self.checkVerified(schedule.id) { (checkin) -> Void in
@@ -153,15 +172,19 @@ class CheckAPI {
     }
   }
   
-  func loadCheckins(completion: (([Checkin]) -> Void)!) {
-    let urlString = base_url + "/checkins/"
+  func loadCheckins(var urlString: String?, completion: (([Checkin]) -> Void)!) {
+    if urlString == nil{
+      urlString = "\(base_url)/checkins/"
+    }
     if let token = self.OAuthToken {
       let headers = [
         "Authorization": "token \(token)"
       ]
       var checkins = [Checkin]()
-      Alamofire.request(.GET, urlString, headers: headers).responseJSON { response in
+      Alamofire.request(.GET, urlString!, headers: headers).responseJSON { response in
         if let JSON = response.result.value {
+          self.next_checkins = JSON["next"] as? String
+          self.total_checkins = JSON["count"] as! Int
           self.jsonArray = JSON["results"] as? NSMutableArray
           for item in self.jsonArray! {
             let checkin = Checkin(data: item as! NSDictionary)
