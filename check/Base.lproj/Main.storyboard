@@ -717,9 +717,6 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" red="0.14625942707061768" green="0.59312176704406738" blue="0.83490675687789917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="fUs-kP-oiL" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="2Yz-Cz-Cln"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="YSg-Mu-XWI">
                                         <rect key="frame" x="0.0" y="140" width="375" height="44"/>
@@ -741,7 +738,7 @@
                                         <animations/>
                                         <color key="backgroundColor" red="0.14625942707061768" green="0.59312176704406738" blue="0.83490675687789917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="fUs-kP-oiL" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="0k3-5e-Lf7"/>
+                                            <segue destination="fUs-kP-oiL" kind="custom" identifier="viewSchedules" customClass="SWRevealViewControllerSeguePushController" id="0k3-5e-Lf7"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" id="Lhl-bY-wgF">
@@ -790,33 +787,28 @@
                                             <segue destination="nfd-F4-tVx" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="TiN-F8-qjT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="wCH-lo-NJF">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="MBU-SM-hvy">
                                         <rect key="frame" x="0.0" y="272" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wCH-lo-NJF" id="Iau-rv-ypW">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MBU-SM-hvy" id="xpr-ZH-3WP">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74T-f6-emj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmC-jb-orQ">
                                                     <rect key="frame" x="45" y="8" width="42" height="31"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                    <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988085031509399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988085029999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhP-6P-w67">
-                                                    <rect key="frame" x="0.0" y="-5" width="359" height="54"/>
-                                                    <animations/>
-                                                    <connections>
-                                                        <action selector="logout:" destination="eqo-Pp-djq" eventType="touchUpInside" id="OOL-oN-hrg"/>
-                                                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutView" id="tBF-cE-sF5"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.14625942707061768" green="0.59312176704406738" blue="0.83490675687789917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.14625942710000001" green="0.59312176699999997" blue="0.83490675690000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="fUs-kP-oiL" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="jm2-3d-TKe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -880,7 +872,6 @@
         <image name="unckeck" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Yz-Cz-Cln"/>
-        <segue reference="tBF-cE-sF5"/>
+        <segue reference="0k3-5e-Lf7"/>
     </inferredMetricsTieBreakers>
 </document>

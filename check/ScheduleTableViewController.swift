@@ -49,12 +49,11 @@ class ScheduleTableViewController: UITableViewController {
     self.schedules.removeAll()
     api.loadSchedules(nil, completion: self.didLoadSchedules)
     print("viewWillAppear table")
+    print("token: \(api.OAuthToken)")
 //    super.viewDidAppear(animated)
-//    print("viewDidLoad table")
 //    schedules = [Schedule]()
-////    super.viewDidAppear(false)
-//    self.showLoginView()
-////    print("viewDidAppear table")
+//    super.viewDidAppear(false)
+    self.showLoginView()
   }
   
   override func didReceiveMemoryWarning() {
