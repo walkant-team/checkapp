@@ -52,6 +52,8 @@ class MapViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+      
+    
     @IBAction func sharedUbication(sender: AnyObject) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         let googleAction = UIAlertAction(title: "Google", style: .Default, handler: googleHandler)
