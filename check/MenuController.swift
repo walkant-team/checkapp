@@ -34,14 +34,6 @@ class MenuController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
   
-  @IBAction func logout(sender: AnyObject) {
-//    self.revealViewController().revealViewController()
-//    self.performSegueWithIdentifier("logoutView", sender: self)
-//    api.logout() { (successful) -> () in
-//      print(successful)
-//    }
-  }
-  
     // MARK: - Table view data source
 /*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -111,15 +103,16 @@ class MenuController: UITableViewController {
     */  
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//    if indexPath.row != 0 {
-      let cell = tableView.cellForRowAtIndexPath(indexPath)
-      cell?.contentView.backgroundColor = UIColor(red:0.037, green:0.468, blue:0.707, alpha:1.0)
-//    }
-    
-//    // sign in item
+    let cell = tableView.cellForRowAtIndexPath(indexPath)
+    cell?.contentView.backgroundColor = UIColor(red:0.037, green:0.468, blue:0.707, alpha:1.0)
     if indexPath.row == 4 {
       api.logout() { (successful) -> () in
-        print(successful)
+        let rowToSelect:NSIndexPath = NSIndexPath(forRow: 1, inSection: 0)
+        self.tableView.selectRowAtIndexPath(rowToSelect, animated: true, scrollPosition: UITableViewScrollPosition.None)
+        let cell = tableView.cellForRowAtIndexPath(rowToSelect)
+        cell?.contentView.backgroundColor = UIColor(red:0.037, green:0.468, blue:0.707, alpha:1.0)
+        cell?.contentView.layer.borderWidth = 0.0
+        self.tableView.separatorColor = UIColor(red:0.037, green:0.468, blue:0.707, alpha:1.0)
       }
     }
   }

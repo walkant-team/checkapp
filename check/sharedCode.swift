@@ -10,33 +10,33 @@ import Foundation
 
 extension String
 {
-    func toDateTime() -> NSDate
-    {
-        //Create Date Formatter
-        let dateFormatter = NSDateFormatter()
-        
-        //Specify Format of String to Parse
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        //Parse into NSDate
-        let dateFromString : NSDate = dateFormatter.dateFromString(self)!
-        
-        //Return Parsed Date
-        return dateFromString
+  func toDateTime() -> NSDate?
+  {
+    let formatter = NSDateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    if let date = formatter.dateFromString(self) {
+      return date
+    } else {
+      formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSSSSS"
+      if let  date = formatter.dateFromString(self) {
+        return date
+      }
     }
+    return nil
+  }
 }
 
 extension NSDate
 {
-    func toStringCustom() -> String
-    {
-        let dateFormatter = NSDateFormatter()
-        
-        dateFormatter.dateFormat = "EEEE d' de 'MMM h:mm a"
-        dateFormatter.locale = NSLocale(localeIdentifier: "es_PE")
-        
-        let stringFromDate : String = dateFormatter.stringFromDate(self)
-        
-        return stringFromDate
-    }
+  func toStringCustom() -> String
+  {
+    let dateFormatter = NSDateFormatter()
+    
+    dateFormatter.dateFormat = "EEEE d' de 'MMM h:mm a"
+    dateFormatter.locale = NSLocale(localeIdentifier: "es_PE")
+    
+    let stringFromDate : String = dateFormatter.stringFromDate(self)
+    
+    return stringFromDate
+  }
 }

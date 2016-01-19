@@ -36,23 +36,11 @@ class ScheduleTableViewController: UITableViewController {
       menuButton.action = "revealToggle:"
       self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
-    print("viewDidLoad table")
-//    schedules = [Schedule]()
-//    api.loadSchedules(self.didLoadSchedules)
-//    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//      self.api.loadSchedules(self.didLoadSchedules)
-//    })
   }
   
   override func viewWillAppear(animated: Bool) {
     schedules = [Schedule]()
     self.schedules.removeAll()
-    api.loadSchedules(nil, completion: self.didLoadSchedules)
-    print("viewWillAppear table")
-    print("token: \(api.OAuthToken)")
-//    super.viewDidAppear(animated)
-//    schedules = [Schedule]()
-//    super.viewDidAppear(false)
     self.showLoginView()
   }
   
@@ -74,16 +62,6 @@ class ScheduleTableViewController: UITableViewController {
   }
 
   func didLoadSchedules(schedules: [Schedule]){
-//    var new_schedules = [Schedule]()
-//    for schedule in self.schedules {
-//      
-//      api.checkVerified(schedule.id, completion: { (checkin) -> Void in
-//        
-//        schedule.checkin = checkin
-//      })
-//      new_schedules.append(schedule)
-//      
-//    }
     self.schedules = schedules
     self.tableView.reloadData()
   }
@@ -91,7 +69,7 @@ class ScheduleTableViewController: UITableViewController {
   func loadMoreSchedules() {
     api.loadSchedules(api.next_schedules) { (schedules: [Schedule]) -> Void in
       self.schedules! += schedules
-      self.tableView?.reloadData()
+      self.tableView.reloadData()
     }
   }
 
@@ -100,7 +78,6 @@ class ScheduleTableViewController: UITableViewController {
       self.performSegueWithIdentifier("loginView", sender: self)
     }else{
       api.loadSchedules(nil, completion: didLoadSchedules)
-      self.tableView?.reloadData()
     }
   }
   
@@ -137,15 +114,19 @@ class ScheduleTableViewController: UITableViewController {
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCellWithIdentifier("scheduleCell", forIndexPath: indexPath) as! ScheduleTableViewCell
-
       // Configure the cell...
       let schedule = schedules[indexPath.row]
       cell.selectionStyle = UITableViewCellSelectionStyle.None
       cell.scheduleLabel?.text = schedule.date_time
       cell.addressLabel?.text = schedule.event.address
       cell.titleLabel?.text = schedule.event.name
-      if schedule.checkin != nil {
-        cell.checkImageView?.image = UIImage(named: "check.png")
+      dispatch_async(dispatch_get_main_queue()) {
+        self.api.checkVerified(schedule.id, completion: { (checkin) -> Void in
+          schedule.checkin = checkin
+          if schedule.checkin != nil {
+            cell.checkImageView?.image = UIImage(named: "check.png")
+          }
+        })
       }
       return cell
   }
@@ -192,10 +173,10 @@ class ScheduleTableViewController: UITableViewController {
       // Get the new view controller using segue.destinationViewController.
       // Pass the selected object to the new view controller.
       if segue.identifier == "showEventDetail" {
-          if let indexPath = tableView.indexPathForSelectedRow {
-              let destinationController = segue.destinationViewController as! ScheduleDetailViewController
-              destinationController.schedule = schedules[indexPath.row]
-          }
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let destinationController = segue.destinationViewController as! ScheduleDetailViewController
+            destinationController.schedule = schedules[indexPath.row]
+        }
       }
   }
   
