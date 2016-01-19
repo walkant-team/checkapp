@@ -145,15 +145,17 @@ class CheckAPI {
         if let JSON = response.result.value {
           self.next_schedules = JSON["next"] as? String
           self.total_schedules = JSON["count"] as! Int
-          self.jsonArray = JSON["results"] as? NSMutableArray                              
-          for item in self.jsonArray! {
-            let schedule = Schedule(data: item as! NSDictionary)
-            schedules.append(schedule)
-          }
-          let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-          dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            dispatch_async(dispatch_get_main_queue()) {
-              completion(schedules)
+          self.jsonArray = JSON["results"] as? NSMutableArray
+          if self.jsonArray != nil {
+            for item in self.jsonArray! {
+              let schedule = Schedule(data: item as! NSDictionary)
+              schedules.append(schedule)
+            }
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+              dispatch_async(dispatch_get_main_queue()) {
+                completion(schedules)
+              }
             }
           }
         }
@@ -175,14 +177,16 @@ class CheckAPI {
           self.next_checkins = JSON["next"] as? String
           self.total_checkins = JSON["count"] as! Int
           self.jsonArray = JSON["results"] as? NSMutableArray
-          for item in self.jsonArray! {
-            let checkin = Checkin(data: item as! NSDictionary)
-            checkins.append(checkin)
-          }
-          let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-          dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            dispatch_async(dispatch_get_main_queue()) {
-              completion(checkins)
+          if self.jsonArray != nil {
+            for item in self.jsonArray! {
+              let checkin = Checkin(data: item as! NSDictionary)
+              checkins.append(checkin)
+            }
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+              dispatch_async(dispatch_get_main_queue()) {
+                completion(checkins)
+              }
             }
           }
         }
