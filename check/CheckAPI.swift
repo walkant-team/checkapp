@@ -92,6 +92,8 @@ class CheckAPI {
             let checkin = Checkin(data: JSON as! NSDictionary)            
             completion(checkin: checkin)            
           }
+        }else{
+          return
         }
       }
     }
@@ -146,9 +148,6 @@ class CheckAPI {
           self.jsonArray = JSON["results"] as? NSMutableArray                              
           for item in self.jsonArray! {
             let schedule = Schedule(data: item as! NSDictionary)
-//            self.checkVerified(schedule.id) { (checkin) -> Void in
-//              schedule.checkin = checkin
-//            }
             schedules.append(schedule)
           }
           let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
