@@ -67,6 +67,7 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
       
       let camera = GMSCameraPosition.cameraWithLatitude(latitude, longitude: longitude, zoom: 14)
       self.mapView.camera = camera
+      self.mapView.delegate = self
       
       let marker = GMSMarker()
       marker.position = CLLocationCoordinate2DMake(latitude, longitude)
