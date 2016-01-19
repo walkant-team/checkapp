@@ -14,8 +14,6 @@ class Schedule {
   var hour : String!
   var date : String!
   var date_time : String!
-//  var checkin : Bool?
-//  var checkout : Bool?
   var event: Event!
   var user: User!
   var checkin: Checkin?
@@ -27,9 +25,8 @@ class Schedule {
     self.date = data["date"] as! String
     
     let dateString = "\(self.date) \(self.hour)"
-    let datetime = dateString.toDateTime()
-    
-    self.date_time = datetime.toStringCustom()
+    let datetime = dateString.toDateTime()    
+    self.date_time = datetime?.toStringCustom()
     
     if let eventData = data["event"] as? NSDictionary {
       self.event = Event(data: eventData)

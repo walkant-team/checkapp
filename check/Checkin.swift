@@ -21,16 +21,21 @@ class Checkin {
   var schedule: Schedule!
   
   init(data : NSDictionary){
-    
     self.id = data["id"] as! Int
+    self.check_out = data["check_out"] as! Bool
+    
     self.hour_in = data["hour_in"] as! String
     self.date_in = data["date_in"] as! String
-    self.hour_out = data["hour_out"] as? String
-    self.date_out = data["date_out"] as? String
-    self.check_out = data["check_out"] as! Bool
-    self.fulldate_in = "\(self.hour_in) \(self.date_in)"
+    let dateStringIn = "\(self.date_in) \(self.hour_in)"
+    let datetimein = dateStringIn.toDateTime()
+    self.fulldate_in = datetimein?.toStringCustom()
+    
     if self.check_out == true {
-      self.fulldate_out = "\(self.hour_out) \(self.date_out)"
+      self.hour_out = data["hour_out"] as! String
+      self.date_out = data["date_out"] as! String
+      let dateStringOut = "\(self.date_out) \(self.hour_out)"
+      let datetimeout = dateStringOut.toDateTime()
+      self.fulldate_out = datetimeout?.toStringCustom()
     }else {
       self.fulldate_out = "No se hizo checkout"
     }
