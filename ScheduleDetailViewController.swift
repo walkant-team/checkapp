@@ -12,7 +12,6 @@ import Alamofire
 
 class ScheduleDetailViewController: UIViewController, UIDocumentInteractionControllerDelegate, GMSMapViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-   @IBOutlet weak var pickedImage: UIImageView!
   @IBOutlet var titleLabel:UILabel!
   @IBOutlet var scheduleLabel:UILabel!
   @IBOutlet var addressLabel:UILabel!
