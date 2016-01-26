@@ -15,7 +15,7 @@
 		AF03AE531C480DA800E64561 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF03AE521C480DA800E64561 /* Locksmith.framework */; };
 		AF03AE551C480DAB00E64561 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF03AE541C480DAB00E64561 /* SwiftyJSON.framework */; };
 		AF1632BF1C3ED6BC00A3C60B /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1632BE1C3ED6BC00A3C60B /* Checkin.swift */; };
-		AF2444041C535DBC0083E8F9 /* RBResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2444031C535DBC0083E8F9 /* RBResizer.swift */; settings = {ASSET_TAGS = (); }; };
+		AF2444041C535DBC0083E8F9 /* RBResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2444031C535DBC0083E8F9 /* RBResizer.swift */; };
 		AF3861561C2904BB00F26332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861551C2904BB00F26332 /* AppDelegate.swift */; };
 		AF3861581C2904BB00F26332 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861571C2904BB00F26332 /* LoginViewController.swift */; };
 		AF38615B1C2904BB00F26332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3861591C2904BB00F26332 /* Main.storyboard */; };
@@ -29,7 +29,7 @@
 		AF8A6B421C30DE2F002347D2 /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B411C30DE2F002347D2 /* ScheduleDetailViewController.swift */; };
 		AF8A6B441C31054A002347D2 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B431C31054A002347D2 /* MenuController.swift */; };
 		AF8A6B4D1C311710002347D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */; };
-		AFF399801C56EB0800531961 /* NetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3997F1C56EB0800531961 /* NetData.swift */; settings = {ASSET_TAGS = (); }; };
+		AFF399801C56EB0800531961 /* NetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3997F1C56EB0800531961 /* NetData.swift */; };
 		AFF434061C30B6460071B9F1 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434051C30B6460071B9F1 /* ScheduleTableViewController.swift */; };
 		AFF434081C30C0CC0071B9F1 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434071C30C0CC0071B9F1 /* ScheduleTableViewCell.swift */; };
 		AFFF39DA1C349A6600218D7B /* CheckAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF39D91C349A6600218D7B /* CheckAPI.swift */; };

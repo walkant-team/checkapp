@@ -115,8 +115,10 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
     self.dismissViewControllerAnimated(true, completion: nil)
 //    pickedImage.image = self.RBSquareImageTo(image)
     
+    self.showActivityIndicator()
     
     api.checkinSchedule(schedule.id, image: image) { (successful) -> () in
+      self.hideActivityIndicator()
       self.checkinButton.setTitle("Checkout", forState: UIControlState.Normal)
       self.checkinButton.tag = self.checkoutButtonTag
     }

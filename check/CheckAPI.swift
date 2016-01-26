@@ -101,10 +101,11 @@ class CheckAPI {
   
   func checkinSchedule(scheduleId: Int, image : UIImage, completion: (successful: Bool) -> ()) {
     if let _ = self.OAuthToken {
-      let image_new : NSData = UIImageJPEGRepresentation(image, 50)!
+      let imageName = NSUUID().UUIDString
+      let image_new : NSData = UIImageJPEGRepresentation(image, 40)!
         
       let parameters = [
-        "image": NetData(data: image_new, mimeType: .ImageJpeg, filename: "customName.jpg"),
+        "image": NetData(data: image_new, mimeType: .ImageJpeg, filename: "\(imageName).jpg"),
         "schedule": scheduleId
       ]
       let urlString = self.urlRequestWithComponents("\(base_url)/checkins/", parameters: parameters)
