@@ -96,11 +96,11 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
     if sender.tag == checkinButtonTag {
       let image = UIImagePickerController()
       image.delegate = self
-      image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-      image.allowsEditing = false
-//      image.sourceType = UIImagePickerControllerSourceType.Camera
+//      image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+//      image.allowsEditing = false
+      image.sourceType = UIImagePickerControllerSourceType.Camera
 //      image.cameraDevice = UIImagePickerControllerCameraDevice.Front
-//      image.allowsEditing = true
+      image.allowsEditing = true
       self.presentViewController(image, animated: true, completion: nil)
     } else if sender.tag == checkoutButtonTag {
       api.checkoutSchedule(schedule.checkin!.id) { (successful) -> () in
@@ -114,9 +114,8 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
     self.dismissViewControllerAnimated(true, completion: nil)
 //    pickedImage.image = self.RBSquareImageTo(image)
     
-    let image_new : NSData = UIImageJPEGRepresentation(image, 32)!
     
-    api.checkinSchedule(schedule.id, image: image_new) { (successful) -> () in
+    api.checkinSchedule(schedule.id, image: image) { (successful) -> () in
       self.checkinButton.setTitle("Checkout", forState: UIControlState.Normal)
       self.checkinButton.tag = self.checkoutButtonTag
     }
