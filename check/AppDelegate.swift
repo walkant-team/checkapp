@@ -34,8 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     UINavigationBar.appearanceForTraitCollection(regularVertical).titleTextAttributes = titleDict
     
-    // Change the status bar's appearance
-    UIApplication.sharedApplication().statusBarStyle = .LightContent
+
   }
 
     func applicationWillResignActive(application: UIApplication) {

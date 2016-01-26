@@ -10,8 +10,9 @@ import UIKit
 import GoogleMaps
 import Alamofire
 
-class ScheduleDetailViewController: UIViewController, UIDocumentInteractionControllerDelegate, GMSMapViewDelegate {
-
+class ScheduleDetailViewController: UIViewController, UIDocumentInteractionControllerDelegate, GMSMapViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  
+   @IBOutlet weak var pickedImage: UIImageView!
   @IBOutlet var titleLabel:UILabel!
   @IBOutlet var scheduleLabel:UILabel!
   @IBOutlet var addressLabel:UILabel!
@@ -57,27 +58,26 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
       
     if (self.schedule.event.file == nil) {
       fileButton.hidden = true
+//      var verticalSpace = NSLayoutConstraint(item: self.imageView, attribute: .Bottom, relatedBy: .Equal, toItem: self.button, attribute: .Bottom, multiplier: 1, constant: 50)      
     }
-      
-
-    super.viewDidLoad()
-      
-      let latitude = schedule.event.latitude
-      let longitude = schedule.event.longitude
-      
-      let camera = GMSCameraPosition.cameraWithLatitude(latitude, longitude: longitude, zoom: 14)
-      self.mapView.camera = camera
-      self.mapView.delegate = self
-      
-      let marker = GMSMarker()
-      marker.position = CLLocationCoordinate2DMake(latitude, longitude)
-      marker.title = schedule.event.name
-      marker.snippet = schedule.event.description
-      marker.map = mapView
+    
+      self.loadMap()
+      super.viewDidLoad()
   }
   
-  func didLoadCheckin(checkin: Checkin?){
-    self.schedule.checkin = checkin
+  func loadMap(){
+    let latitude = schedule.event.latitude
+    let longitude = schedule.event.longitude
+    
+    let camera = GMSCameraPosition.cameraWithLatitude(latitude, longitude: longitude, zoom: 14)
+    self.mapView.camera = camera
+    self.mapView.delegate = self
+    
+    let marker = GMSMarker()
+    marker.position = CLLocationCoordinate2DMake(latitude, longitude)
+    marker.title = schedule.event.name
+    marker.snippet = schedule.event.description
+    marker.map = mapView
   }
   
     override func didReceiveMemoryWarning() {
@@ -88,32 +88,40 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
-        
-//        let carBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-//        carBtn.setImage(UIImage(named: "car"), forState: UIControlState.Normal)
-////        carBtn.addTarget(self.navigationController, action: "", forControlEvents:  UIControlEvents.TouchUpInside)
-//        let item = UIBarButtonItem(customView: carBtn)
-//        self.navigationItem.rightBarButtonItem = item
     }
 
   @IBAction func checkinAction(sender: AnyObject) {
     if sender.tag == checkinButtonTag {
-      api.checkinSchedule(schedule.id) { (successful) -> () in
-        self.checkinButton.setTitle("Checkout", forState: UIControlState.Normal)
-        self.checkinButton.tag = self.checkoutButtonTag
-        print(successful)
-      }
+      let image = UIImagePickerController()
+      image.delegate = self
+      image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+      image.allowsEditing = false
+//      image.sourceType = UIImagePickerControllerSourceType.Camera
+//      image.cameraDevice = UIImagePickerControllerCameraDevice.Front
+//      image.allowsEditing = true
+      self.presentViewController(image, animated: true, completion: nil)
     } else if sender.tag == checkoutButtonTag {
       api.checkoutSchedule(schedule.checkin!.id) { (successful) -> () in
         print(successful)
         self.checkinButton.hidden = true
       }
-    }    
+    }
   }
+  
+  func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+    self.dismissViewControllerAnimated(true, completion: nil)
+//    pickedImage.image = self.RBSquareImageTo(image)
     
+    let image_new : NSData = UIImageJPEGRepresentation(image, 32)!
+    
+    api.checkinSchedule(schedule.id, image: image_new) { (successful) -> () in
+      self.checkinButton.setTitle("Checkout", forState: UIControlState.Normal)
+      self.checkinButton.tag = self.checkoutButtonTag
+    }
+  }
+  
     @IBAction func fileButtonAction(sender: AnyObject) {
         let file_url = self.schedule.event.file! as String
         Alamofire.download(.GET, file_url) { temporaryURL, response in
@@ -170,7 +178,6 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
     
     // GMSMapView delegate
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
-        print("entro")
         self.performSegueWithIdentifier("showMap", sender: self)
     }
 

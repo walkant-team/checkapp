@@ -30,6 +30,9 @@ class Schedule {
     
     if let eventData = data["event"] as? NSDictionary {
       self.event = Event(data: eventData)
-    }        
+    }
+    if let checkinData = data["checkin"] as? NSDictionary {
+      self.checkin = Checkin(data: checkinData)
+    }
   }
 }

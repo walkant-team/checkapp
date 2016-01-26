@@ -14,20 +14,26 @@ class ScheduleTableViewController: UITableViewController {
   @IBOutlet var menuButton:UIBarButtonItem!
   
   var schedules : [Schedule]!
-  var isAuthenticated = false
-  var didReturnFromBackground = false
   let api = CheckAPI()
+  var spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+  var loadingView: UIView = UIView()
+  var refresher : UIRefreshControl!
+  
   
   override func viewDidLoad() {
+    
     super.viewDidLoad()
-    // Remove the title of the back button
+    
+    // refresh
+    refresher = UIRefreshControl()
+    refresher.attributedTitle = NSAttributedString(string: "pull to refresh")
+    refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+    self.tableView.addSubview(refresher)
+    
     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
   
-    // Change the color of the table view
     tableView.backgroundColor = UIColor.whiteColor()
-    // Remove the separators of the empty rows
     tableView.tableFooterView = UIView(frame: CGRectZero)
-    // Change the color of the separator
     tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
     
     // Menu toggle
@@ -36,8 +42,12 @@ class ScheduleTableViewController: UITableViewController {
       menuButton.action = "revealToggle:"
       self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
+    
+//    schedules = [Schedule]()
+//    self.schedules.removeAll()
+//    self.showLoginView()
   }
-  
+
   override func viewWillAppear(animated: Bool) {
     schedules = [Schedule]()
     self.schedules.removeAll()
@@ -49,26 +59,45 @@ class ScheduleTableViewController: UITableViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  func checkinSchedules(){
-    var new_schedules = [Schedule]()
-    for schedule in self.schedules {
-      api.checkVerified(schedule.id, completion: { (checkin) -> Void in
-        schedule.checkin = checkin
-      })
-      new_schedules.append(schedule)
+  func showActivityIndicator() {
+    dispatch_async(dispatch_get_main_queue()) {
+      self.loadingView = UIView()
+      self.loadingView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
+      self.loadingView.center = self.view.center
+      self.loadingView.backgroundColor = UIColor.grayColor()
+      self.loadingView.alpha = 0.7
+      self.loadingView.clipsToBounds = true
+      self.loadingView.layer.cornerRadius = 10
+      
+      self.spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+      self.spinner.frame = CGRect(x: 0.0, y: 0.0, width: 80.0, height: 80.0)
+      self.spinner.center = CGPoint(x:self.loadingView.bounds.size.width / 2, y:self.loadingView.bounds.size.height / 2)
+      
+      self.loadingView.addSubview(self.spinner)
+      self.view.addSubview(self.loadingView)
+      self.spinner.startAnimating()
     }
-    self.schedules.removeAll()
-    self.schedules = new_schedules
   }
+  
+  func hideActivityIndicator() {
+    dispatch_async(dispatch_get_main_queue()) {
+      self.spinner.stopAnimating()
+      self.loadingView.removeFromSuperview()
+    }
+  }
+  
 
   func didLoadSchedules(schedules: [Schedule]){
     self.schedules = schedules
+    self.hideActivityIndicator()
     self.tableView.reloadData()
+    self.refresher.endRefreshing()
   }
   
   func loadMoreSchedules() {
     api.loadSchedules(api.next_schedules) { (schedules: [Schedule]) -> Void in
       self.schedules! += schedules
+      self.hideActivityIndicator()
       self.tableView.reloadData()
     }
   }
@@ -77,26 +106,17 @@ class ScheduleTableViewController: UITableViewController {
     if !api.hasOAuthToken() {
       self.performSegueWithIdentifier("loginView", sender: self)
     }else{
-      api.loadSchedules(nil, completion: didLoadSchedules)
+      self.showActivityIndicator()
+      refresh()
     }
   }
   
-  func appWillResignActive(notification : NSNotification) {
-    print("appWillResignActive")
-    view.alpha = 0
-    isAuthenticated = false
-    didReturnFromBackground = true
+  func refresh(){
+    api.loadSchedules(nil, completion: didLoadSchedules)
   }
   
-  func appDidBecomeActive(notification : NSNotification) {
-    print("appDidBecomeActive")
-    if didReturnFromBackground {
-      self.showLoginView()
-    }
-  }
 
   @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-    isAuthenticated = true
     view.alpha = 1.0
   }
 
@@ -116,17 +136,13 @@ class ScheduleTableViewController: UITableViewController {
       let cell = tableView.dequeueReusableCellWithIdentifier("scheduleCell", forIndexPath: indexPath) as! ScheduleTableViewCell
       // Configure the cell...
       let schedule = schedules[indexPath.row]
-      cell.selectionStyle = UITableViewCellSelectionStyle.None
-      cell.scheduleLabel?.text = schedule.date_time
-      cell.addressLabel?.text = schedule.event.address
-      cell.titleLabel?.text = schedule.event.name
-      dispatch_async(dispatch_get_main_queue()) {
-        self.api.checkVerified(schedule.id, completion: { (checkin) -> Void in
-          schedule.checkin = checkin
-          if schedule.checkin != nil {
-            cell.checkImageView?.image = UIImage(named: "check.png")
-          }
-        })
+      cell.scheduleLabel.text = schedule.date_time
+      cell.addressLabel.text = schedule.event.address
+      cell.titleLabel.text = schedule.event.name
+      if schedule.checkin != nil {
+        cell.checkImageView.image = UIImage(named: "check.png")
+      }else{
+        cell.checkImageView.image = UIImage(named: "uncheck.png")
       }
       return cell
   }
@@ -185,5 +201,4 @@ class ScheduleTableViewController: UITableViewController {
       self.loadMoreSchedules()
     }
   }
-
 }

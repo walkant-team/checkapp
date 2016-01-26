@@ -60,7 +60,6 @@ class MapViewController: UIViewController {
         let wazeAction = UIAlertAction(title: "Waze", style: .Default, handler: wazeHandler)
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
             (alert: UIAlertAction!) -> Void in
-            print("Cancelled")
         })
         
         actionSheet.addAction(googleAction)

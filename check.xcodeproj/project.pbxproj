@@ -15,6 +15,7 @@
 		AF03AE531C480DA800E64561 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF03AE521C480DA800E64561 /* Locksmith.framework */; };
 		AF03AE551C480DAB00E64561 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF03AE541C480DAB00E64561 /* SwiftyJSON.framework */; };
 		AF1632BF1C3ED6BC00A3C60B /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1632BE1C3ED6BC00A3C60B /* Checkin.swift */; };
+		AF2444041C535DBC0083E8F9 /* RBResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2444031C535DBC0083E8F9 /* RBResizer.swift */; settings = {ASSET_TAGS = (); }; };
 		AF3861561C2904BB00F26332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861551C2904BB00F26332 /* AppDelegate.swift */; };
 		AF3861581C2904BB00F26332 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3861571C2904BB00F26332 /* LoginViewController.swift */; };
 		AF38615B1C2904BB00F26332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3861591C2904BB00F26332 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		AF8A6B421C30DE2F002347D2 /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B411C30DE2F002347D2 /* ScheduleDetailViewController.swift */; };
 		AF8A6B441C31054A002347D2 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B431C31054A002347D2 /* MenuController.swift */; };
 		AF8A6B4D1C311710002347D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */; };
+		AFF399801C56EB0800531961 /* NetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3997F1C56EB0800531961 /* NetData.swift */; settings = {ASSET_TAGS = (); }; };
 		AFF434061C30B6460071B9F1 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434051C30B6460071B9F1 /* ScheduleTableViewController.swift */; };
 		AFF434081C30C0CC0071B9F1 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF434071C30C0CC0071B9F1 /* ScheduleTableViewCell.swift */; };
 		AFFF39DA1C349A6600218D7B /* CheckAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF39D91C349A6600218D7B /* CheckAPI.swift */; };
@@ -61,6 +63,7 @@
 		AF03AE521C480DA800E64561 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = "Pods/../build/Debug-iphoneos/Locksmith.framework"; sourceTree = "<group>"; };
 		AF03AE541C480DAB00E64561 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		AF1632BE1C3ED6BC00A3C60B /* Checkin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkin.swift; sourceTree = "<group>"; };
+		AF2444031C535DBC0083E8F9 /* RBResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBResizer.swift; sourceTree = "<group>"; };
 		AF3861521C2904BB00F26332 /* check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = check.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3861551C2904BB00F26332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF3861571C2904BB00F26332 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		AF8A6B431C31054A002347D2 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		AF8A6B461C310AA1002347D2 /* check-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "check-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF8A6B4C1C311710002347D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AFF3997F1C56EB0800531961 /* NetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetData.swift; sourceTree = "<group>"; };
 		AFF434051C30B6460071B9F1 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		AFF434071C30C0CC0071B9F1 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		AFFF39D91C349A6600218D7B /* CheckAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAPI.swift; sourceTree = "<group>"; };
@@ -137,6 +141,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AF2444051C535DC80083E8F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AF2444031C535DBC0083E8F9 /* RBResizer.swift */,
+				AFF3997F1C56EB0800531961 /* NetData.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		AF3861491C2904BB00F26332 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +175,7 @@
 		AF3861541C2904BB00F26332 /* check */ = {
 			isa = PBXGroup;
 			children = (
+				AF2444051C535DC80083E8F9 /* Utils */,
 				AFFF39D81C349A4000218D7B /* checkAPI */,
 				AFFF39D71C3499BF00218D7B /* cells */,
 				AFFF39D61C34998400218D7B /* views */,
@@ -308,7 +322,6 @@
 				TargetAttributes = {
 					AF3861511C2904BB00F26332 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 8DFZGWBP8R;
 					};
 					AF3861651C2904BB00F26332 = {
 						CreatedOnToolsVersion = 7.0;
@@ -431,11 +444,13 @@
 				AF8A6B4D1C311710002347D2 /* ProfileViewController.swift in Sources */,
 				AFFF39DA1C349A6600218D7B /* CheckAPI.swift in Sources */,
 				AF3861561C2904BB00F26332 /* AppDelegate.swift in Sources */,
+				AFF399801C56EB0800531961 /* NetData.swift in Sources */,
 				AF5CF6191C39FE9600FF190A /* Schedule.swift in Sources */,
 				AF03AE421C47FAAB00E64561 /* CheckinTableViewController.swift in Sources */,
 				AF03AE4B1C47FE8E00E64561 /* CheckinTableViewCell.swift in Sources */,
 				AF8A6B3E1C30D14F002347D2 /* Event.swift in Sources */,
 				821448221C4B08B100E19A72 /* sharedCode.swift in Sources */,
+				AF2444041C535DBC0083E8F9 /* RBResizer.swift in Sources */,
 				8276ABBB1C48F95B0048EAD9 /* MapViewController.swift in Sources */,
 				AF1632BF1C3ED6BC00A3C60B /* Checkin.swift in Sources */,
 			);
@@ -581,6 +596,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -589,6 +605,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = walkant.check;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "check/check-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -602,6 +619,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -610,6 +628,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = walkant.check;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "check/check-Bridging-Header.h";
 			};
 			name = Release;
