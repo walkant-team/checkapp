@@ -85,7 +85,6 @@ class ScheduleTableViewController: UITableViewController {
       self.loadingView.removeFromSuperview()
     }
   }
-  
 
   func didLoadSchedules(schedules: [Schedule]){
     self.schedules = schedules
