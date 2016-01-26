@@ -20,6 +20,8 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
   @IBOutlet weak var fileButton: UIButton!
   @IBOutlet weak var mapView: GMSMapView!
   @IBOutlet weak var containerView: UIView!
+  var spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+  var loadingView: UIView = UIView()
   
   let checkinButtonTag = 0
   let checkoutButtonTag = 1
@@ -114,8 +116,9 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
 //    pickedImage.image = self.RBSquareImageTo(image)
     
     let image_new : NSData = UIImageJPEGRepresentation(image, 32)!
-    
+    self.showActivityIndicator()
     api.checkinSchedule(schedule.id, image: image_new) { (successful) -> () in
+      self.hideActivityIndicator()
       self.checkinButton.setTitle("Checkout", forState: UIControlState.Normal)
       self.checkinButton.tag = self.checkoutButtonTag
     }
@@ -179,5 +182,32 @@ class ScheduleDetailViewController: UIViewController, UIDocumentInteractionContr
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
         self.performSegueWithIdentifier("showMap", sender: self)
     }
+  
+  func showActivityIndicator() {
+    dispatch_async(dispatch_get_main_queue()) {
+      self.loadingView = UIView()
+      self.loadingView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
+      self.loadingView.center = self.view.center
+      self.loadingView.backgroundColor = UIColor.grayColor()
+      self.loadingView.alpha = 0.7
+      self.loadingView.clipsToBounds = true
+      self.loadingView.layer.cornerRadius = 10
+      
+      self.spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+      self.spinner.frame = CGRect(x: 0.0, y: 0.0, width: 80.0, height: 80.0)
+      self.spinner.center = CGPoint(x:self.loadingView.bounds.size.width / 2, y:self.loadingView.bounds.size.height / 2)
+      
+      self.loadingView.addSubview(self.spinner)
+      self.view.addSubview(self.loadingView)
+      self.spinner.startAnimating()
+    }
+  }
+  
+  func hideActivityIndicator() {
+    dispatch_async(dispatch_get_main_queue()) {
+      self.spinner.stopAnimating()
+      self.loadingView.removeFromSuperview()
+    }
+  }
 
 }
